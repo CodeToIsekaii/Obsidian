@@ -25,7 +25,7 @@ git reset --hard origin/main
 ### *Cách 2: Xóa thư mục local rồi clone lại (cách bạn từng làm)*
 
 rm -rf ObsidianVault
-git clone https://github.com/CodeToIsekaii/Obsidian.git ObsidianVault
+git clone https://github.com/CodeToIsekaii/Obsidian.git 
 
 ---
 
