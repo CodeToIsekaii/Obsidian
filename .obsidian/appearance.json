@@ -1,0 +1,11 @@
+{
+  "baseFontSize": 16,
+  "cssTheme": "Simple",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "obsidian_theme_config",
+    "latex"
+  ],
+  "theme": "obsidian",
+  "accentColor": "#cd4c5f"
+}

@@ -1,0 +1,117 @@
+___
+#### Bạn cấp 2
+- Hiếu
+- Phước
+- Sư Phụ
+- Tâm
+- Đạt
+- Mạnh
+- Nghĩa
+- Đăng
+- Mike khang
+#### Bạn cấp 3
+- Lộc hói
+- Phụng béo
+- Nam idol
+- Vưn
+- Nhân
+- Nguyên
+- Dũng
+- Lương
+- Trung rmit
+- Nhật
+- Phúc ngố
+- Sơn 
+- Trọng
+- Hoàng béo
+- Đạt
+- Vinh
+- Bo 
+- Hưng
+- Kiệt
+- Tài
+- Thịnh
+- Hào
+- Thắng
+- Dũng học thêm
+#### Bạn đại học
+- Phát 
+- Tuấn
+- Long
+- Khoa
+- Trường
+- Phương rock
+- Phương
+- Tuấn buồi
+- Kim cương
+- Nguyên
+- Hân
+- Tiến
+- Thịnh qp
+- Đạt trưởng phòng
+- Tài
+- An
+- Bảo qp
+- Quang
+- Quân qp
+- Tiến qp
+#### AE Piedteam
+- Nam Hoàng
+- Đô
+- anh Điệp
+- anh Bình
+- Doanh
+- Hưng
+- anh Trí
+- Minh
+- Duy nhây
+- anh Nam
+- anh Tận
+- anh Hoàng
+- Việt
+#### AE Chuk
+- chị Thuận
+- chị Quyên
+- anh Lộc
+- em Trang
+- chị Dương
+- em Tú
+- ông Đạt 
+- chị Phương Anh
+- em Nghĩa
+- Linh
+- anh Khánh
+- chị Hằng
+- Vy
+- Ngân
+- Long
+- anh An
+- Trân
+- chị Hân
+- chị Hân lớn
+- chị Ngọc
+- anh Luân
+#### AE Machiya
+- anh Long gang
+- anh Tử
+- anh Long lịch
+- anh Quang
+- chị Nhật
+- anh Long béo
+- an Loi
+- em Linh
+- anh Mạnh
+- anh Long kin
+- anh Huy 
+- anh Tín
+- anh Danh 
+- anh Quốc
+- chú Hiển
+- chị Hạnh 
+- anh Quang chủ
+#### Family
+- Mẹ
+- Bố
+- Nhóc ác
+- anh họ nhà bác cường
+- chị họ nhà bác cường

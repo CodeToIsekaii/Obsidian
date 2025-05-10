@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "migrated": true,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "emojiStyle": "none",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "FasDiagramProject",
+      "RiBook3Fill",
+      "RiQuillPenFill",
+      "IbTarget",
+      "FasTruck"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false
+  },
+  "Demo Vault 2/1. PROJECT": "IbTarget",
+  "My Brain/0. MAP.md": "FasMap",
+  "My Brain/Hướng dẫn sử dụng.md": "RiBook3Fill",
+  "My Brain/2. RESOURCE": "FasTruck",
+  "My Brain/1. ARCHIEVED": "FasBoxArchive",
+  "My Brain/4. VISUAL NOTES": "FasDiagramProject"
+}

@@ -1,0 +1,14 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":free:",
+    ":card_index_dividers:",
+    ":paintbrush:",
+    ":arrow_right:",
+    ":banana:",
+    ":clock5:"
+  ]
+}
