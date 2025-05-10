@@ -35,3 +35,50 @@ git clone https://github.com/CodeToIsekaii/Obsidian.git
 git add .
 git commit -m "update"
 git push origin main
+
+<!--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-->
+
+Để **xoá hết và clone lại repo từ đầu** (giải quyết sạch sẽ mọi lỗi push protection), bạn làm theo hướng dẫn dưới đây:
+
+---
+
+## 🔥 Bước 1: Xoá thư mục cũ
+
+Giả sử repo bạn nằm trong:
+
+```
+/storage/emulated/0/Documents/ObsidianVault
+```
+
+Bạn chạy:
+
+```bash
+rm -rf /storage/emulated/0/Documents/ObsidianVault
+```
+
+---
+
+## 📥 Bước 2: Clone lại repo từ GitHub
+
+Chạy:
+
+```bash
+cd /storage/emulated/0/Documents
+git clone https://github.com/CodeToIsekaii/Obsidian.git ObsidianVault
+```
+
+> Dòng trên sẽ clone vào thư mục `ObsidianVault`.
+
+---
+
+## ✅ Bước 3: Vào thư mục và bắt đầu làm việc
+
+```bash
+cd ObsidianVault
+```
+
+Giờ bạn đã có repo mới, sạch hoàn toàn. Có thể chỉnh sửa, pull hoặc push lại như bình thường.
+
+---
+
+Bạn có cần hướng dẫn cách cấu hình HTTPS bằng token để không phải nhập mỗi lần push không?
