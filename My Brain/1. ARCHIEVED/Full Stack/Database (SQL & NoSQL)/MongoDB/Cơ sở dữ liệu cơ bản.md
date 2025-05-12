@@ -384,7 +384,7 @@ lúc này ta k cần liên kết, hay tìm kiếm, nó nằm gọn trong 1 objec
   - ưu : query, update, tránh lookup(join)
   - nhược: document quá nhiều data, mà nhu cầu đọc ít, cuối cùng dẫn đến việc hao phí, giới hạn của doc là 16MB(ít)
 - **Referencing(tham chiếu)** :
-
+ 
   - ưu : chia nhỏ doc, ít chạm giới hạn 16mb, các dữ liệu k cần thiết sẽ k bị đính kèm như embedding, giảm trùng lập dữ liệu
     **_đôi khi hi sinh trùng lập để hiệu năng tốt hơn_**
   - nhược: truy xuất hết data thì ít nhất phải có 2 query hoặc , $lookup(join)
