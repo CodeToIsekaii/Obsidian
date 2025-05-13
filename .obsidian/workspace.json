@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "81f986d4c449966b",
+        "id": "554284861b805937",
         "type": "tabs",
         "children": [
           {
-            "id": "3b82ec1d82694c90",
+            "id": "5fd08c20f3f5de9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "New tab"
             }
           }
         ]
@@ -214,7 +200,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Untitled.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -242,7 +227,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Untitled"
+              "title": "Graph view"
             }
           }
         ]
@@ -291,7 +276,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "3b82ec1d82694c90",
+  "active": "5fd08c20f3f5de9f",
   "lastOpenFiles": [
     "Untitled.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/08-chuanHoaXuLyLoi.md",
