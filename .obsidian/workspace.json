@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "8680bb059c439e8a",
+            "id": "d9e5cbf15df10f6a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Topic.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Topic"
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "e1abfd707052273c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 1"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -239,7 +263,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Topic.md",
+                "file": "Untitled 1.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -267,7 +291,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Topic"
+              "title": "Graph of Untitled 1"
             }
           }
         ]
@@ -316,11 +340,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "8680bb059c439e8a",
+  "active": "e1abfd707052273c",
   "lastOpenFiles": [
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+    "Untitled.md",
+    "Untitled 1.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "Topic.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/08-chuanHoaXuLyLoi.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/04-validate.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
@@ -352,8 +378,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/16-TweetsFeature01.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/11-UserFeature.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/13-OAuth2.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/14-media.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/12-UserFeature2.md",
     "e -i a554236bf9c4330aac1d5977af27d1d812c34e3d^",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject",
