@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
+                "file": "khởi tạo môi trường react.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01-twitterProjectIns"
+              "title": "khởi tạo môi trường react"
             }
           }
         ]
@@ -214,7 +214,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
+                "file": "khởi tạo môi trường react.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -242,7 +242,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 01-twitterProjectIns"
+              "title": "Graph of khởi tạo môi trường react"
             }
           }
         ]
@@ -293,9 +293,9 @@
   },
   "active": "5fd08c20f3f5de9f",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Untitled 1.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
+    "Untitled.md",
+    "khởi tạo môi trường react.md",
     "Topic.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/08-chuanHoaXuLyLoi.md",
