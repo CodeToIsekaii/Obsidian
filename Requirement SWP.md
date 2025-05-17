@@ -1,7 +1,7 @@
 ---
 date: 2025-05-16T21:33:00
 ---
-Related : [[]]
+ZRelated : [[]]
 Tag: #
 ___
 
@@ -12,7 +12,6 @@ ___
 	- truy cập form đang kí, form đăng nhập
 	- Tư vấn (có thê)
 - Role Customer
-	- những chức năng guest có
 	- đặt lịch xét nghiệm (tự thu mẫu hoặc đến cơ sở y tế)
 	- theo dõi trạng thái mẫu (đã nhận, đang xử lý,hoàn tất)
 	- Nhận thông báo kết quả qua mail
