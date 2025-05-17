@@ -37,4 +37,24 @@ ___
 	- toàn bộ chức năng manager
 	- quản trị hệ thống(backup,update,fixbug)
 	- quản lý người dùng n(tạo sửa ,xóa,phân quyền)
-	- 
+
+Manager và admin khác nhau ở đâu ạ ? vì ở đây gần như chỉ có 2 luồng chính là quản lí lịch trình từ vấn và quản lí xét nghiệm . Luồng theo dõi chu kì sinh sản thì sẽ ko cần ai quản lí vì sẽ có thuật toán và chỉ cần lấy thông tin bỏ vào hồ sơ sức khỏe consultant coi.
+
+Consultants là Bác sĩ hay là chuyên viên tư vấn ạ?
+
+Còn staff hầu như sẽ ko làm gì trong hệ thống này vì phần tư vấn đã có ( consultant ) và phần quản lí đã có ( manager , admin ) nên có cần role staff không ạ?
+
+App web nặng phần quản lí đặt lịch trình hơn và xét nghiệm là phụ view cho người dùng  hay là App web nặng về phần quản lí xét nghiệm giúp Consutants theo dõi và phần đặt lịch là phụ ạ ? vì app em có 1 là phần app public cho khách hàng , 1 là phần app để quản lí cho các role còn lại và chưa biết cần chứ tâm phần nào hơn.
+
+
+
+quản lí xung đột có nhiều kĩ thuật: lock table, transaction (kiểm tra lịch trống, insert lịch book mới trong 1 transaction), hoặc kĩ thuật hàng đợi (queue-based): RabbitMQ, Kafka, Redis Queue
+
+
+Thầy ơi, cho em hỏi là tính năng nạp vào ví tiền phục vụ cho mục đích mua gói, nếu mà nạp thì hệ thống nó sẽ tự động approve cho user (em chưa có ý tưởng về cách hoạt động) hay là admin làm thủ công ạ, em cảm ơn ạ.
+khi bạn nạp tiền vào ví (ví của app) thì sẽ là 2 việc: khách chuyển tiền vào tk của cty qua ví thật, tiền thật ví dụ MoMo, VNPay,thì nền tảng này sẽ trả về 1 trạng thái đã chuyển bao nhiêu và tình trạng thành công, thì bạn sẽ cập nhật vào hệ thống bạn số tiền ví (ảo) tương ứng
+
+dạ trong phần mềm quản lí dịch vụ xét nghiệm huyết thống adn và staff sẽ đăng ký dịch vụ xét nghiệm adn cho khách hàng. thì em tính thiết kế bảng đăng ký dịch vụ thông tin bao gồm: mã đăng ký, loại xét nghiệm, người thực hiện đăng ký thì có hợp lí không thầy
+
+
+![[Pasted image 20250517231222.png]]
