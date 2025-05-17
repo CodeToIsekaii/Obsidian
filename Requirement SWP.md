@@ -20,6 +20,7 @@ ___
 	- quản lý hồ sơ cá nhân
 	- gửi đánh giá ,feedback dịch vụ
 	- hủy hoặc thay đổi lịch trước 24h
+	- Trả lời tư vấn
 - Staff
 	- Quản lý lịch hẹn đã đc đặt(duyệt lịch , điều phối thời gian)
 	- Ghi nhận quá trình thực hiện xét nghiệm và nhập kết quả lên hệ thống.
@@ -27,7 +28,7 @@ ___
 	- Gửi thông báo kết quả đến khách hàng.
 	- Quản lý trạng thái mẫu (đang xử lý, hoàn tất...).
 	- Hỗ trợ tư vấn khách hàng về kỹ thuật mẫu (qua form nội bộ hoặc kênh riêng).
-- Manager
+- Manager(tùi hỏi thầy )
 	- toàn bộ chức năng staff
 	- xem bao cáo thống kê số lưỡng mẫu,thời gian xử lý, tỷ lệ thành công,..
 	- quản lý feedback,đánh giá về dịch vụ
