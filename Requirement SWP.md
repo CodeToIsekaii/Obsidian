@@ -57,3 +57,14 @@ dạ trong phần mềm quản lí dịch vụ xét nghiệm huyết thống adn
 
 
 ![[Pasted image 20250517231222.png]]
+
+
+![[Pasted image 20250518215232.png]]
+
+![[Pasted image 20250518215554.png]]
+
+![[Pasted image 20250518220050.png]]
+
+![[Pasted image 20250518220542.png]]
+
+![[Pasted image 20250518220841.png]]
