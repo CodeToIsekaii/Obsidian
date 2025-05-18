@@ -105,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5,
-    "collapsed": true
+    "width": 265.5
   },
   "right": {
     "id": "b4716a1b82e52f01",
@@ -301,10 +300,10 @@
   },
   "active": "0053c54550642116",
   "lastOpenFiles": [
+    "khởi tạo môi trường react.md",
+    "Requirement SWP.md",
     "attachments/Pasted image 20250517231222.png",
     "attachments",
-    "Requirement SWP.md",
-    "khởi tạo môi trường react.md",
     "Untitled.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Khi nào cần bất đồng bộ.md",
     "My Brain/1. ARCHIEVED/Full Stack/React",
@@ -335,7 +334,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-426.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-425.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-424.png",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-423.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/06-CreateAccessToken-RefreshToken.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/09-logicLogin.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/17-TweetsFeature02.md",

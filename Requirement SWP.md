@@ -20,7 +20,6 @@ ___
 	- quản lý hồ sơ cá nhân
 	- gửi đánh giá ,feedback dịch vụ
 	- hủy hoặc thay đổi lịch trước 24h
-	- Trả lời tư vấn
 - Staff
 	- Quản lý lịch hẹn đã đc đặt(duyệt lịch , điều phối thời gian)
 	- Ghi nhận quá trình thực hiện xét nghiệm và nhập kết quả lên hệ thống.
