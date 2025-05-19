@@ -10,7 +10,7 @@ ___
 	- xem hướng dẫn đặt lịch và quy trình xét nghiệm
 	- xem đánh gia phản hồi của người khác 
 	- truy cập form đang kí, form đăng nhập
-	- Tư vấn (có thê)
+	- Tư vấn 
 - Role Customer
 	- đặt lịch xét nghiệm (tự thu mẫu hoặc đến cơ sở y tế)
 	- theo dõi trạng thái mẫu (đã nhận, đang xử lý,hoàn tất)
