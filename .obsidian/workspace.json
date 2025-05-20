@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Requirement SWP.md",
+                "file": "khởi tạo môi trường react.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Requirement SWP"
+              "title": "khởi tạo môi trường react"
             }
           }
         ],
@@ -221,7 +221,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Requirement SWP.md",
+                "file": "khởi tạo môi trường react.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -249,7 +249,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Requirement SWP"
+              "title": "Graph of khởi tạo môi trường react"
             }
           }
         ]
@@ -300,16 +300,16 @@
   },
   "active": "0053c54550642116",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Requirement SWP.md",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",
     "attachments/Pasted image 20250518220050.png",
     "attachments/Pasted image 20250518215554.png",
     "attachments/Pasted image 20250518215232.png",
     "khởi tạo môi trường react.md",
-    "Requirement SWP.md",
     "attachments/Pasted image 20250517231222.png",
     "attachments",
-    "Untitled.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Khi nào cần bất đồng bộ.md",
     "My Brain/1. ARCHIEVED/Full Stack/React",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
@@ -334,7 +334,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-431.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-432.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-430.png",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-428.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/06-CreateAccessToken-RefreshToken.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/09-logicLogin.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/17-TweetsFeature02.md",
