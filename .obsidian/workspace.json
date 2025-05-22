@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/09-logicLogin.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "02-serverNodejs"
+              "title": "09-logicLogin"
             }
           },
           {
@@ -177,8 +177,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5,
-    "collapsed": true
+    "width": 265.5
   },
   "right": {
     "id": "b4716a1b82e52f01",
@@ -294,7 +293,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/09-logicLogin.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -322,7 +321,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 02-serverNodejs"
+              "title": "Graph of 09-logicLogin"
             }
           }
         ]
@@ -373,8 +372,9 @@
   },
   "active": "0053c54550642116",
   "lastOpenFiles": [
-    "Untitled 1.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+    "Untitled 1.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "Untitled.md",
@@ -402,7 +402,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/23.socketIO.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/18-searchFeature.md",
     "My Brain/Thao tác pull push obsidian.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
     "conflict-files-obsidian-git.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-433.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-431.png",
