@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
+                "file": "Untitled 1.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -106,11 +106,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01-nodejs là gì"
+              "title": "Untitled 1"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -177,7 +177,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 265.5,
+    "collapsed": true
   },
   "right": {
     "id": "b4716a1b82e52f01",
@@ -293,7 +294,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -321,7 +322,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 01-nodejs là gì"
+              "title": "Graph of 02-serverNodejs"
             }
           }
         ]
@@ -370,7 +371,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "79530a90ebeebb2b",
+  "active": "0053c54550642116",
   "lastOpenFiles": [
     "Untitled 1.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
