@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -67,7 +67,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "01-nodejs là gì"
             }
           },
           {
@@ -278,7 +278,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Untitled.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -306,7 +306,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Untitled"
+              "title": "Graph of 01-nodejs là gì"
             }
           }
         ]
@@ -357,18 +357,18 @@
   },
   "active": "5817515914b461cd",
   "lastOpenFiles": [
+    "Requirement SWP.md",
+    "Untitled.md",
     "Untitled 1.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
     "khởi tạo môi trường react.md",
     "My Brain/1. ARCHIEVED/English/Nối âm.md",
     "My Brain/1. ARCHIEVED/English/Listening Skill.md",
     "My Brain/1. ARCHIEVED/English/Cách nói lưu loát.md",
-    "Untitled.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/09-logicLogin.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
-    "Requirement SWP.md",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",
     "attachments/Pasted image 20250518220050.png",
