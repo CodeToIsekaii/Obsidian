@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -67,7 +67,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01-nodejs là gì"
+              "title": "10-accessTokenMiddleware-logout"
             }
           },
           {
@@ -278,7 +278,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -306,7 +306,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 01-nodejs là gì"
+              "title": "Graph of 10-accessTokenMiddleware-logout"
             }
           }
         ]
@@ -357,10 +357,10 @@
   },
   "active": "5817515914b461cd",
   "lastOpenFiles": [
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
     "Requirement SWP.md",
     "Untitled.md",
     "Untitled 1.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
     "khởi tạo môi trường react.md",
     "My Brain/1. ARCHIEVED/English/Nối âm.md",
     "My Brain/1. ARCHIEVED/English/Listening Skill.md",
