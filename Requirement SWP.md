@@ -68,3 +68,23 @@ dạ trong phần mềm quản lí dịch vụ xét nghiệm huyết thống adn
 ![[Pasted image 20250518220542.png]]
 
 ![[Pasted image 20250518220841.png]]
+
+
+Hãy nói tôi nghe về quy trình OOAD một cách chi tiết từng bước, có giải thích các "mẹo" giải quyết vấn đề.  
+  
+Sau đó...  
+Trong môi trường làm phần mềm, ứng dụng web, bạn đóng vai Phân tích viên, BA, Developer.   
+Bạn cần làm một web app với mô tả sơ bộ như dưới đây, bao gồm các Actor và Chức năng chính của app.  
+Bạn có thể đưa thêm những giả định hợp ngữ cảnh, hợp scope, nhằm giúp người dùng có được một app hỗ trợ hiệu quả công việc trong tương lai
+
+????
+
+Bạn hãy tiếp cận phân tích, thiết kế bài toán theo những best practice của phương pháp OOAD, và hiển thị kết quả ở từng giai đoạn của OOAD. Mỗi giai đoạn của OOAD bạn đều giải thích rõ nguyên lý, cách làm, kết quả, và những thứ liên quan.  
+Bạn cũng có thể vừa OOAD vừa phân tích luôn cả ERD.
+
+Đoạn cuối, hãy thiết kế ERD cho bài toán này, theo ngôn ngữ DSL, để có thể nhúng vào dbdiagram.io render mô hình, và ra cả database script trên SQL Server
+
+Bao nhiêu table là đủ: câu trả lời là DB đã đủ lưu trữ các nghiệp vụ bài toán của bạn chưa. Câu hỏi tiếp: nghiệp vụ đã đủ cho nhóm chưa (scope). 
+Thầy cô trên lớp sẽ cùng bạn căn scop
+theo cách bạn tách bảng thì hầu như tự nó rơi về chuẩn 3NF
+nếu bàn về RDBMS nếu tách quá nhiều bảng, tính trùng lặp dữ liệu giảm thiểu, nhưng giá phải trả cho phần join ảnh hưởng performance

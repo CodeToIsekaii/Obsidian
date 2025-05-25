@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "khởi tạo môi trường react.md",
+                "file": "Requirement SWP.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "khởi tạo môi trường react"
+              "title": "Requirement SWP"
             }
           },
           {
@@ -94,8 +94,7 @@
               "title": "Untitled 1"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -278,7 +277,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
+                "file": "Requirement SWP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -306,7 +305,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 10-accessTokenMiddleware-logout"
+              "title": "Graph of Requirement SWP"
             }
           }
         ]
@@ -355,18 +354,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5817515914b461cd",
+  "active": "5fd08c20f3f5de9f",
   "lastOpenFiles": [
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
-    "Requirement SWP.md",
     "Untitled.md",
     "Untitled 1.md",
     "khởi tạo môi trường react.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
+    "Requirement SWP.md",
     "My Brain/1. ARCHIEVED/English/Nối âm.md",
     "My Brain/1. ARCHIEVED/English/Listening Skill.md",
     "My Brain/1. ARCHIEVED/English/Cách nói lưu loát.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/09-logicLogin.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "attachments/Pasted image 20250518220841.png",
