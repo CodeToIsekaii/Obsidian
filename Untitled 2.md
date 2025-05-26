@@ -32,5 +32,11 @@ ________________________________________
 5. CUSTOMER REFERENCE – Ai đang sử dụng?
 Được sử dụng rộng rãi trong cộng đồng .NET.
 •	Microsoft (ASP.NET Core).
+Microsoft **tự dùng xUnit** trong các thư viện quan trọng như:
+- ASP.NET Core
+- Entity Framework Core
+- .NET Runtime tests
+Vì Microsoft là nhà phát triển chính của .NET, việc họ dùng xUnit khiến nó trở thành “chuẩn ngầm” cho các công ty khác.
+Điều này khiến nhiều công ty khác cũng **đồng bộ theo hệ sinh thái .NET mới**.
 •	StackOverflow sử dụng trong hệ thống kiểm thử.
 •	JetBrains, GitHub Projects, và hàng ngàn công ty lớn nhỏ.
