@@ -88,3 +88,6 @@ Bao nhiêu table là đủ: câu trả lời là DB đã đủ lưu trữ các n
 Thầy cô trên lớp sẽ cùng bạn căn scop
 theo cách bạn tách bảng thì hầu như tự nó rơi về chuẩn 3NF
 nếu bàn về RDBMS nếu tách quá nhiều bảng, tính trùng lặp dữ liệu giảm thiểu, nhưng giá phải trả cho phần join ảnh hưởng performance
+
+
+staff thấy danh sach các đngư kí xét nghiệm tại nhà ví dụ trong cơ sở có 10 bộ kit thì quản lý riêng từng bô kit có mã riêng , gán bọ kit vào cái phiếu bấm nút gửi người ta , sẽ chuyển thành trạng thái đã chuyển bộ kit, thì khi shipper giao bộ kit đến
