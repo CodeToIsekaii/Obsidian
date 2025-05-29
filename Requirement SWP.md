@@ -91,3 +91,9 @@ nếu bàn về RDBMS nếu tách quá nhiều bảng, tính trùng lặp dữ 
 
 
 staff thấy danh sach các đngư kí xét nghiệm tại nhà ví dụ trong cơ sở có 10 bộ kit thì quản lý riêng từng bô kit có mã riêng , gán bọ kit vào cái phiếu bấm nút gửi người ta , sẽ chuyển thành trạng thái đã chuyển bộ kit, thì khi shipper giao bộ kit đến,staff xác nhận chuyển qua cho phòng xét nghiêm,có kết quả staff  cập nhật lên hệ thống
+
+
+custommer:
+- bang tiến trình 
+- lịch sử các dịch vụ đang ký 
+- kết quả trả về
