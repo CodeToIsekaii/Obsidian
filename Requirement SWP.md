@@ -97,3 +97,9 @@ custommer:
 - bang tiến trình 
 - lịch sử các dịch vụ đang ký 
 - kết quả trả về
+
+
+Luồng tại nhà:
+register =>staff nhận đơn(xác nhận)=> ghi mã bộ kit=> gửi cho cus (đổi trạng thái đã gửi kít )=>cus tiếp nhận điền thông tin mẫu đơn trong hệ thống và nhấn gửi(đồng thời ngoài đời cũng đữamẫu kit cho shipper trả về)=>staff nhận mẫu (xác nhận trên hệ thông tôi đã nhận mẫu)=>staff nhập kết quả=>manager xác nhận kết quả (trong list kết quả staff nhập)=>staff gửi kết quả=>cus thấy kết quả trên hệ thống
+Luồng cơ sở:
+register=>staff ghi mẫu đơn cho cus và nhấn gửi=>trạng thái đã lấy mẫu=>staff nhập kết quả=>manger xác nhận kết quả=> cus thấy kết quả trên hệ thống
