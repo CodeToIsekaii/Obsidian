@@ -100,6 +100,6 @@ custommer:
 
 
 Luồng tại nhà: 
-register=>thanh toán =>staff nhận đơn(trạng thái xác nhận)=> ghi mã bộ kit=> gửi cho cus (đổi trạng thái đã gửi kít )=>cus tiếp nhận điền thông tin mẫu đơn trong hệ thống và nhấn gửi(đồng thời ngoài đời cũng đữa mẫu kit cho shipper trả về)=>staff nhận mẫu (xác nhận trên hệ thông tôi đã nhận mẫu)=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manager xác nhận kết quả (trong list kết quả staff nhập)=>staff gửi kết quả(trạng thái đã có kết quả)=>cus thấy kết quả trên hệ thống 
+chọn dịch vụ=>đăng kí=>thanh toán =>staff nhận đơn(trạng thái xác nhận)=> ghi mã bộ kit=> gửi cho cus (đổi trạng thái đã gửi kít )=>cus tiếp nhận điền thông tin mẫu đơn trong hệ thống và nhấn gửi(đồng thời ngoài đời cũng đữa mẫu kit cho shipper trả về)=>staff nhận mẫu (xác nhận trên hệ thông tôi đã nhận mẫu)=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manager xác nhận kết quả (trong list kết quả staff nhập)=>staff gửi kết quả(trạng thái đã có kết quả)=>cus thấy kết quả trên hệ thống 
 Luồng cơ sở: 
-register=>thanh toán=>staff ghi mẫu đơn kèm mã kit cho cus và nhấn gửi=>trạng thái đã lấy mẫu=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống
+chọn dịch vụ=>chọn ngày giờ và đăng kí>thanh toán=>staff ghi mẫu đơn kèm mã kit cho cus và nhấn gửi=>trạng thái đã lấy mẫu=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống
