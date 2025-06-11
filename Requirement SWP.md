@@ -100,11 +100,181 @@ custommer:
 
 -- luồng chọn chọn dịch vụ:
 cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại dịch vụ hành chính và dân sự , trong 2 loại dịch vụ này sẽ có từng tên dịch vụ kèm giá cả ,trong từng dịch vụ sẽ lại có loại lấy 2 mẫu (ví dụ của cha và con) và loại lấy 3 mẫu(ví dụ cha mẹ con) , mấy cái dịch vụ này sẽ được admin quản lý crud
+
 	- ở hành chính: chỉ được chọn 1 cách lấy mẫu duy nhất là tại cơ sở
 		- lấy tại cơ sở: 
-		khi nhấn chọn đăng kí trên trang dịch vụ nó sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên ,giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động tạo=> staff thấy danh sách đơn đăng kí trên hệ thống =>staff xác nhận đơn đăng kí đó mở đơn ra =>nhập thông tin người cung cấp mẫu tùy vào số mẫu customer chọn ( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của staff và customer nếu trong UserProfile đã có file ảnh chữ kí của staff và customer thì hệ thống tự động nhét chữ kí của staff và customer vào) kèm mã kit vào đơn  và nhấn gửi=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống và có thể xuất kết quả ra file pdf
+		customer khi nhấn  choose trên trang dịch vụ nó sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên ,giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>customer chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động tạo=> staff thấy danh sách đơn đăng kí trên hệ thống =>staff xác nhận đơn đăng kí đó mở đơn ra =>staff nhập thông tin những người cung cấp mẫu tùy vào số mẫu customer chọn ( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của staff và customer nếu trong UserProfile đã có file ảnh chữ kí của staff và customer thì hệ thống tự động nhét chữ kí của staff và customer vào) đồng thời staff nhập mã kit vào đơn (mã kit như là đoạn chuỗi K01 gì đó thôi) và nhấn gửi=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> customer thấy kết quả trên hệ thống và có thể xuất kết quả ra file pdf
+		
 	- ở dân sự: được chọn lấy mẫu tại nhà hoặc tại cơ sở
 		- lấy tại nhà: 
-		khi nhấn chọn đăng kí trên trang dịch vụ nó sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>đăng kí=>thanh toán(bằng vnpay) (chỉ được thay đổi lịch trước 24h)=>thanh toán thành công mới được hệ thống tự động tạo => staff thấy danh sách đơn đăng kí trên hệ thống=>staff xác nhận đơn rồi mở đơn ra add file ảnh chữ kí staff(nếu có sẵn trong UserProfile thì hệ thống tự lấy nhét vào) và ghi mã kit vào đơn đó=>nhấn gửi đơn đăng kí cho cus (đổi trạng thái đã gửi kit )=>cus nhận đơn=>mở đơn ra =>nhập thông tin người cung cấp mẫu tùy vào số mẫu đã chọn mà điền( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của account(nếu có sẵn trong UserProfile thì hệ thống tự lấy nhét vào)) sau đó nhấn gửi=>staff nhận mẫu  rồi nhấn xác nhận =>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manager xác nhận kết quả (trong list kết quả staff nhập)=>staff gửi kết quả(trạng thái đã có kết quả)=>cus thấy kết quả trên hệ thống  và có thể xuất kết quả ra file pdf
+		customer khi nhấn  choose trên trang dịch vụ nó sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>đăng kí=>thanh toán(bằng vnpay) (chỉ được thay đổi lịch trước 24h)=>thanh toán thành công mới được hệ thống tự động tạo => staff thấy danh sách đơn đăng kí trên hệ thống=>staff xác nhận đơn rồi mở đơn ra add file ảnh chữ kí staff(nếu có sẵn trong UserProfile thì hệ thống tự lấy nhét vào) và đồng thời staff nhập mã kit vào đơn đó=>staff nhấn gửi đơn đăng kí  (đổi trạng thái đã gửi kit )=>customer nhận đơn=>customer mở đơn ra =>nhập thông tin những người cung cấp mẫu tùy vào số mẫu đã chọn mà điền( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của account(nếu có sẵn trong UserProfile thì hệ thống tự lấy nhét vào)) sau đó nhấn gửi=>staff nhận mẫu  rồi nhấn xác nhận =>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manager xác nhận kết quả (trong list kết quả staff nhập)=>staff gửi kết quả(trạng thái đã có kết quả)=>customer thấy kết quả trên hệ thống  và có thể xuất kết quả ra file pdf
 		- lấy tại cơ sở: 
-		khi nhấn chọn đăng kí trên trang dịch vụ nó sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên ,giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động tạo=> staff thấy danh sách đơn đăng kí trên hệ thống =>staff xác nhận đơn đăng kí đó mở đơn ra =>nhập thông tin người cung cấp mẫu tùy vào số mẫu customer chọn ( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của staff và customer nếu trong UserProfile đã có file ảnh chữ kí của staff và customer thì hệ thống tự động nhét chữ kí của staff và customer vào) kèm mã kit vào đơn  và nhấn gửi=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống và có thể xuất kết quả ra file pdf
+		customer khi nhấn choose trên trang dịch vụ nó sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên ,giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>customer chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động tạo=> staff thấy danh sách đơn đăng kí trên hệ thống =>staff xác nhận đơn đăng kí đó mở đơn ra =>staff nhập thông tin những người cung cấp mẫu tùy vào số mẫu customer chọn ( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của staff và customer nếu trong UserProfile đã có file ảnh chữ kí của staff và customer thì hệ thống tự động nhét chữ kí của staff và customer vào) đồng thời staff nhập mã kit vào đơn (mã kit như là đoạn chuỗi K01 gì đó thôi) và nhấn gửi=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> customer thấy kết quả trên hệ thống và có thể xuất kết quả ra file pdf
+
+nghĩa đăng nhập vào web nhân vào trang dịch vụ sẽ có 2 tap phân ra hành chính và dân sự  nhấn vào bên nào thì hiện bảng list dịch vụ tên ,giá tiền, mô tả, số mẫu và có nút choose ở từng hàng trong bảng đó khi nhấn choose nó sẽ hiện tất cả thông tin cái dịch vụ đó và nút xác nhận khi nhấn xác nhận thì sẽ cho người dùng chọn ngày giờ nới lấy mẫu, nếu chọn tại nhà thì sẽ không cho chọn ngày giờ, nhấn đăng kí sẽ qua thanh toán.....
+
+
+### **Truy cập trang dịch vụ**
+luồng chọn chọn dịch vụ:
+cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại dịch vụ hành chính và dân sự , trong 2 loại dịch vụ này sẽ có từng tên dịch vụ kèm giá cả ,trong từng dịch vụ sẽ lại có loại lấy 2 mẫu (ví dụ của cha và con) và loại lấy 3 mẫu(ví dụ cha mẹ con) , mấy cái dịch vụ này sẽ được admin quản lý crud
+
+- Sau khi **đăng nhập**, khách hàng truy cập vào **trang Dịch vụ**.
+- Giao diện trang này hiển thị **hai tab phân loại dịch vụ**:
+    - **Dịch vụ Hành chính**
+    - **Dịch vụ Dân sự**
+- Khi nhấn vào từng tab, hệ thống hiển thị một **bảng danh sách các dịch vụ** tương ứng. Trong mỗi bảng dịch vụ sẽ bao gồm các thông tin:
+    - Tên dịch vụ
+    - Giá cả
+    - Mô tả
+    - Loại mẫu (2 mẫu hoặc 3 mẫu)
+    - Nút **Choose** (Chọn)
+---
+### 2. **Chọn dịch vụ**
+- Khi khách hàng nhấn **Choose** cho một dịch vụ bất kỳ, hệ thống sẽ hiển thị **thông tin chi tiết** của dịch vụ bao gồm:
+    - Loại dịch vụ (Hành chính hoặc Dân sự)
+    - Tên và mô tả dịch vụ
+    - Giá tiền
+    - Loại mẫu (2 hay 3 mẫu)
+    - Phương thức lấy mẫu:
+        - Hành chính: **chỉ lấy tại cơ sở**
+        - Dân sự: chọn giữa **lấy tại nhà** hoặc **tại cơ sở**
+- Giao diện hiển thị nút **Xác nhận**. Khi khách hàng nhấn xác nhận:
+    - Nếu dịch vụ là **lấy mẫu tại cơ sở**, khách hàng sẽ được **chọn ngày giờ lấy mẫu**.
+    - Nếu dịch vụ là **lấy tại nhà**, **không hiển thị phần chọn ngày giờ**.
+---
+### 3. **Đăng ký dịch vụ*
+- Sau khi xác nhận dịch vụ và chọn ngày giờ (nếu có), khách hàng nhấn nút **Đăng ký**.
+- Hệ thống chuyển đến bước **thanh toán qua VNPay**.
+- Lưu ý: Khách hàng **chỉ được phép thay đổi lịch hẹn trước 24 giờ** so với lịch đã đặt.
+---
+## 📌 **Luồng xử lý theo từng loại dịch vụ**
+
+### 🔸 **Dịch vụ Hành chính** (Chỉ lấy mẫu tại cơ sở)
+1. Sau khi thanh toán thành công, **đơn đăng ký được hệ thống tự động tạo**.
+2. Nhân viên (staff) thấy đơn trên hệ thống, **mở đơn và xác nhận**.
+3. Nhân viên nhập thông tin người cung cấp mẫu (tùy theo số mẫu đã chọn):
+    - Họ tên
+    - Năm sinh
+    - Giới tính
+    - Mối quan hệ
+    - Loại mẫu
+    - Cam kết
+    - Ảnh chữ ký của khách hàng và staff
+        - Nếu đã có ảnh chữ ký sẵn trong **UserProfile**, hệ thống tự động chèn vào.
+4. Nhân viên nhập **mã kit** (ví dụ: K01), sau đó nhấn **Gửi**.
+5. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
+6. Staff nhập kết quả xét nghiệm.
+7. Quản lý (manager) xác nhận kết quả.
+8. Staff nhấn **Trả kết quả** → đơn chuyển sang trạng thái **Đã có kết quả**.
+9. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
+----
+### 🔸 **Dịch vụ Dân sự**
+#### 👉 **Lấy mẫu tại nhà*
+1. Sau khi khách hàng thanh toán thành công, **đơn đăng ký được tự động tạo**.
+2. Nhân viên thấy đơn, mở và xác nhận → nhập **mã kit** và chèn ảnh chữ ký staff (nếu có trong UserProfile, hệ thống tự động chèn).
+3. Nhấn **Gửi** → đơn chuyển sang trạng thái **Đã gửi kit**.
+4. Khách hàng nhận kit, mở đơn và nhập thông tin người cung cấp mẫu (tùy vào số mẫu đã chọn):
+    - Họ tên
+    - Năm sinh
+    - Giới tính
+    - Mối quan hệ
+    - Loại mẫu
+    - Cam kết
+    - Ảnh chữ ký của tài khoản (tự động lấy nếu có sẵn trong UserProfile)
+5. Khách hàng nhấn **Gửi**.
+6. Nhân viên nhận mẫu, nhấn **Xác nhận** → đơn chuyển sang trạng thái **Đang xét nghiệm**.
+7. Staff nhập kết quả.
+8. Manager xác nhận kết quả.
+9. Staff gửi kết quả → trạng thái **Đã có kết quả**.
+10. Khách hàng xem kết quả trên hệ thống và có thể **xuất ra file PDF**.
+#### 👉 **Lấy mẫu tại cơ sở**
+1. Sau khi thanh toán thành công, **đơn đăng ký được hệ thống tự động tạo**.
+2. Nhân viên (staff) thấy đơn trên hệ thống, **mở đơn và xác nhận**.
+3. Nhân viên nhập thông tin người cung cấp mẫu (tùy theo số mẫu đã chọn):
+    - Họ tên
+    - Năm sinh
+    - Giới tính
+    - Mối quan hệ
+    - Loại mẫu
+    - Cam kết
+    - Ảnh chữ ký của khách hàng và staff
+        - Nếu đã có ảnh chữ ký sẵn trong **UserProfile**, hệ thống tự động chèn vào.    
+4. Nhân viên nhập **mã kit** (ví dụ: K01), sau đó nhấn **Gửi**.
+5. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
+6. Staff nhập kết quả xét nghiệm.
+7. Quản lý (manager) xác nhận kết quả.
+8. Staff nhấn **Trả kết quả** → đơn chuyển sang trạng thái **Đã có kết quả**.
+9. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
+   ---
+## ✅ **1. Validate & Ràng buộc cho Dịch vụ**
+### 1.1. **Tại giao diện chọn dịch vụ*
+- ✅ **Loại dịch vụ** chỉ được là `"Hành chính"` hoặc `"Dân sự"`.
+- ✅ **Giá tiền** phải là số lớn hơn 0.
+- ✅ **Số mẫu** chỉ được chọn là **2** hoặc **3**.
+- ✅ **Cách lấy mẫu**
+    - Với **hành chính**: chỉ cho phép **tại cơ sở**.
+    - Với **dân sự**: được chọn **tại nhà** hoặc **tại cơ sở**.
+- ✅ **Tên dịch vụ** phải duy nhất trong từng loại.
+- ✅ **Mỗi dịch vụ** phải có mô tả (không để trống).
+---
+## ✅ **2. Validate & Ràng buộc khi đăng ký dịch vụ**
+
+### 2.1. **Thông tin dịch vụ được tự động đổ vào đơn đăng ký**, không cho người dùng chỉnh sửa:
+- Loại dịch vụ
+- Tên dịch vụ
+- Giá
+- Số mẫu
+- Cách lấy mẫu
+### 2.2. **Chọn ngày giờ lấy mẫu**
+- **Chỉ áp dụng khi chọn lấy mẫu tại cơ sở**.
+- Phải chọn **ngày giờ trong tương lai**, tối thiểu **>= 24 giờ kể từ thời điểm hiện tại**.
+- Không cho phép chọn **quá giới hạn thời gian phục vụ của trung tâm** (ví dụ: chỉ nhận mẫu từ 8:00 đến 17:00).
+- **Không cho phép sửa lịch nếu còn < 24h đến lịch hẹn**.
+---
+## ✅ **3. Validate & Ràng buộc khi thanh toán**
+- ✅ Thanh toán **bắt buộc** thông qua VNPay (các trường hợp chưa thanh toán thì không tạo đơn).
+- ✅ Trạng thái thanh toán phải là **thành công** để tiếp tục quy trình.
+- ✅ Mỗi đơn chỉ được thanh toán **một lần duy nhất**.
+---
+## ✅ **4. Validate thông tin người cung cấp mẫu**
+Tùy theo số mẫu (2 hoặc 3), yêu cầu **điền đủ thông tin cho từng người**
+- Họ tên: không rỗng, tối đa 100 ký tự.
+- Năm sinh: là số, trong khoảng hợp lý (ví dụ: từ 1900 đến năm hiện tại).
+- Giới tính: chỉ chọn “Nam”, “Nữ” 
+- Mối quan hệ: không được trống.
+- Loại mẫu: ví dụ “Niêm mạc miệng”, “Tóc”, v.v. → phải nằm trong danh sách hợp lệ.
+- Cam kết: checkbox bắt buộc tick trước khi gửi.
+- Ảnh chữ ký:
+    - Nếu trong UserProfile đã có, sẽ tự động điền.
+    - Nếu không có sẵn, **bắt buộc upload ảnh trước khi gửi**.
+---
+## ✅ **5. Validate mã kit*
+- ✅ Mã kit là chuỗi **bắt đầu bằng chữ K** và theo sau là số (ví dụ: `K01`, `K12`,...).
+- ✅ Mã kit **không được trùng lặp** trong các đơn khác.
+- ✅ Bắt buộc phải nhập mã kit trước khi gửi đơn sang bước xét nghiệm.
+---
+## ✅ **6. Ràng buộc trạng thái đơn đăng ký**
+- Đơn đăng ký có các **trạng thái xác định rõ ràng** và chỉ được thay đổi theo luồng hợp lệ:
+    `Đang chờ thanh toán → Đã thanh toán → Đã xác nhận → Đã gửi kit (nếu lấy tại nhà) → Đang xét nghiệm → Đã có kết quả`
+- Không được nhảy bước hoặc quay ngược trạng thái.
+---
+## ✅ **7. Ràng buộc nhập kết quả*
+- ✅ Chỉ cho phép **staff đã được phân công** đơn mới được nhập kết quả.
+- ✅ Phải nhập đầy đủ thông tin kết quả theo mẫu chuẩn.
+- ✅ Sau khi nhập, **quản lý (manager)** phải xác nhận thì mới được staff gửi kết quả cho khách hàng.
+---
+## ✅ **8. Xuất PDF kết quả**
+
+- Chỉ cho phép **khách hàng có đơn trạng thái “Đã có kết quả”** được xuất PDF.
+- File PDF phải có:
+    - Thông tin dịch vụ
+    - Người cung cấp mẫu
+    - Kết quả xét nghiệm
+    - Ngày trả kết quả
+    - Chữ ký số hoặc ảnh chữ ký của staff & customer (nếu có)
+---
+## ✅ **9. Bảo mật & Quyền truy cập*
+- Khách hàng **chỉ được xem** các đơn và kết quả của chính họ.
+- Nhân viên **chỉ được xem và chỉnh sửa** các đơn được phân công.
+- Quản lý **chỉ được xác nhận kết quả**, không sửa nội dung xét nghiệm.
+- Admin có quyền **CRUD dịch vụ**, không can thiệp đơn đăng ký.
