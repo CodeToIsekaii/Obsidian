@@ -46,8 +46,7 @@
               "title": "Untitled 4"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -230,7 +229,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Untitled 4.md",
+                "file": "Requirement SWP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -258,7 +257,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Untitled 4"
+              "title": "Graph of Requirement SWP"
             }
           }
         ]
@@ -307,7 +306,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "85bd848a12a360a2",
+  "active": "5fd08c20f3f5de9f",
   "lastOpenFiles": [
     "Untitled 4.md",
     "Requirement SWP.md",
