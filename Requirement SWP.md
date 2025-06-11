@@ -278,3 +278,6 @@ Tùy theo số mẫu (2 hoặc 3), yêu cầu **điền đủ thông tin cho t�
 - Nhân viên **chỉ được xem và chỉnh sửa** các đơn được phân công.
 - Quản lý **chỉ được xác nhận kết quả**, không sửa nội dung xét nghiệm.
 - Admin có quyền **CRUD dịch vụ**, không can thiệp đơn đăng ký.
+  
+  
+  
