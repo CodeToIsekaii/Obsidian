@@ -98,14 +98,14 @@ custommer:
 - lịch sử các dịch vụ đang ký 
 - kết quả trả về
 
-- luồng chọn chọn dịch vụ:
-	- luồng hành chính:
-		- cơ sở: 
-		chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động  tạo => staff thấy danh sách đơn đăng kí trên hệ thống=>staff ghi mẫu đơn kèm mã kit cho cus và nhấn gửi=>trạng thái đã lấy mẫu=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống
+-- luồng chọn chọn dịch vụ:
+cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại dịch vụ hành chính và dân sự , trong 2 loại dịch vụ này sẽ có từng tên dịch vụ kèm giá cả ,trong từng dịch vụ sẽ lại có loại lấy 2 mẫu giá măc định(ví dụ của cha và con) và loại lấy 3 mẫu(ví dụ cha mẹ con) giá sẽ công thêm 1500000 mấy cái dịch vụ này sẽ được admin quản lý crud
+	- ở hành chính: chỉ được chọn 1 cách lấy mẫu duy nhất là tại cơ sở
+		- lấy tại cơ sở: 
+		khi nhấn chọn đăng kí trên trang dịch vụ sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động tạo=> staff thấy danh sách đơn đăng kí trên hệ thống =>staff xác nhận đơn đăng kí đó mở đơn ra =>nhập thông tin người cung cấp mẫu( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của staff và customer) kèm mã kit cho cus và nhấn gửi=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống
 	
-	- luồng dân sự:
-	
-		- tại nhà: 
-		đăng kí=>thanh toán(bằng vnpay) (chỉ được thay đổi lịch trước 24h)=>thanh toán thành công mới được hệ thống tự động tạo => staff thấy danh sách đơn đăng kí trên hệ thống=>staff nhận đơn(trạng thái xác nhận)=> ghi mã bộ kit=> gửi cho cus (đổi trạng thái đã gửi kít )=>cus tiếp nhận điền thông tin mẫu đơn trong hệ thống và nhấn gửi(đồng thời ngoài đời cũng đữa mẫu kit cho shipper trả về)=>staff nhận mẫu (xác nhận trên hệ thông tôi đã nhận mẫu)=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manager xác nhận kết quả (trong list kết quả staff nhập)=>staff gửi kết quả(trạng thái đã có kết quả)=>cus thấy kết quả trên hệ thống 
-		- cơ sở: 
-		chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động tạo=> staff thấy danh sách đơn đăng kí trên hệ thống =>staff ghi mẫu đơn kèm mã kit cho cus và nhấn gửi=>trạng thái đã lấy mẫu=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống
+	- ở dân sự: được chọn lấy mẫu tại nhà hoặc tại cơ sở
+		- lấy tại nhà: 
+		khi nhấn chọn đăng kí trên trang service sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>đăng kí=>thanh toán(bằng vnpay) (chỉ được thay đổi lịch trước 24h)=>thanh toán thành công mới được hệ thống tự động tạo => staff thấy danh sách đơn đăng kí trên hệ thống=>staff xác nhận đơn mở đơn ra ghi mã kit=>nhấn gửi cho cus (đổi trạng thái đã gửi kít )=>cus tiếp nhận kit từ shipper và mở hệ thống=>mở đơn ra =>nhập thông tin người cung cấp mẫu( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của customer) trong hệ thống và nhấn gửi(đồng thời ngoài đời cũng đữa mẫu kit cho shipper trả về)=>staff nhận mẫu và mở đơn ra add file ảnh chữ kí staff rồi nhấn xác nhận =>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manager xác nhận kết quả (trong list kết quả staff nhập)=>staff gửi kết quả(trạng thái đã có kết quả)=>cus thấy kết quả trên hệ thống 
+		- lấy tại cơ sở: 
+		khi nhấn chọn đăng kí trên trang service sẽ nhảy vào đơn đăng kí với đầy đủ thông tin loại  dịch vụ (hành chính hoặc dân sự,tên giá cả của dịch vụ đó,lấy 2 mẫu hay 3 mẫu)=>chọn ngày giờ và đăng kí=>thanh toán(bằng vnpay)(chỉ được thay đổi lịch trước 24h)=>thanh toán thành công đơn đăng kí mới được hệ thống tự động tạo=> staff thấy danh sách đơn đăng kí trên hệ thống =>staff xác nhận đơn đăng kí đó mở đơn ra =>nhập thông tin người cung cấp mẫu( tên,năm sinh,giới tính, mối quan hệ,loại mẫu,cam kết, add file ảnh chữ kí của staff và customer) kèm mã kit cho cus và nhấn gửi=>chuyển qua trạng thái đang xét nghiệm=>staff nhập kết quả=>manger xác nhận kết quả=>staff trả kết quả (đã có kết quả)=> cus thấy kết quả trên hệ thống
