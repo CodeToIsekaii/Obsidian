@@ -114,6 +114,8 @@ cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại 
 nghĩa đăng nhập vào web nhân vào trang dịch vụ sẽ có 2 tap phân ra hành chính và dân sự  nhấn vào bên nào thì hiện bảng list dịch vụ tên ,giá tiền, mô tả, số mẫu và có nút choose ở từng hàng trong bảng đó khi nhấn choose nó sẽ hiện tất cả thông tin cái dịch vụ đó và nút xác nhận khi nhấn xác nhận thì sẽ cho người dùng chọn ngày giờ nới lấy mẫu, nếu chọn tại nhà thì sẽ không cho chọn ngày giờ, nhấn đăng kí sẽ qua thanh toán.....
 
 
+
+file .env của bloodline-dna-backend: PORT=5000, JWT_SECRET=123@, DB_USER=sa, DB_PASSWORD=12345, DB_SERVER=localhost, DB_DATABASE=BloodTestServiceDB, DEFAULT_ADMIN_EMAIL=admindeptraivl@gmail.com, DEFAULT_ADMIN_PASSWORD=admin123!!!, FRONTEND_URL=http://localhost:3000, VNP_URL=https://sandbox.vnpayment.vn/paymentv2/vpcpay.html ,VNP_TMN_CODE=less50more500, VNP_HASH_SECRET=less50more500, VNP_RETURN_URL=http://localhost:3000/payment/callback, -------------- file .env của bloodline-dna-frontend : VITE_APP_NAME=GenUnity, VITE_API_URL=http://localhost:5000 ,VITE_API_BASE_URL=http://localhost:5000/api ,VITE_APP_VERSION=1.0.0 ,VITE_NODE_ENV=development
 ### **Truy cập trang dịch vụ**
 luồng chọn chọn dịch vụ:
 cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại dịch vụ hành chính và dân sự , trong 2 loại dịch vụ này sẽ có từng tên dịch vụ kèm giá cả ,trong từng dịch vụ sẽ lại có loại lấy 2 mẫu (ví dụ của cha và con) và loại lấy 3 mẫu(ví dụ cha mẹ con) , mấy cái dịch vụ này sẽ được admin quản lý crud
