@@ -646,8 +646,8 @@ Tùy theo số mẫu (2 hoặc 3), yêu cầu **điền đủ thông tin cho t�
 - Quản lý **chỉ được xác nhận kết quả**, không sửa nội dung xét nghiệm.
 - Admin có quyền **CRUD dịch vụ**, không can thiệp đơn đăng ký.
   
-+Yêu cầu 3: kết hợp Yêu cầu 1 và yêu cầu 2 lại rồi code từ database tới backend rồi tới frontend
-- nếu database thiếu bảng thì tạo bảng cho đủ với cái luồng yêu cầu  2, có ràng buộc đầy đủ hợp lý,id dùng int number chứ không được dùng uuid,dùng axios, async await,...,
++Yêu cầu 3: kết hợp Yêu cầu 1 và yêu cầu 2 (bắt buộc phải code theo các file đã tạo sẵn) lại rồi code từ database tới backend rồi tới frontend
+- nếu database thiếu bảng thì tạo bảng cho đủ với cái luồng yêu cầu  2, có ràng buộc đầy đủ hợp lý,id dùng int number chứ không được dùng uuid,dùng axios, async await,..., react router
 - code đúng ràng buộc type prettier eslint 
 +Yêu cầu 4:
 1. **Xác Minh Tính Tích Hợp Giữa Frontend và Backend**:
