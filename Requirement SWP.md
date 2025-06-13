@@ -284,3 +284,176 @@ Tùy theo số mẫu (2 hoặc 3), yêu cầu **điền đủ thông tin cho t�
   
 
 
+Dưới đây là cấu trúc file cho cả frontend và backend của dự án của bạn, sử dụng React Vite + Tailwind CSS + TypeScript cho frontend và Node.js + Express + TypeScript cho backend. Cấu trúc này cũng bao gồm việc xử lý lỗi, ràng buộc, enum, validate, interface, type, phù hợp với các yêu cầu của luồng dịch vụ.
+
+---
+
+### **Frontend (React Vite + Tailwind + TypeScript)**
+
+```
+frontend/
+│
+├── public/                            # Các tài nguyên công cộng
+│   └── index.html                     # Tệp HTML chính
+│
+├── src/
+│   ├── assets/                        # Các tài nguyên như ảnh, biểu tượng
+│   │   └── logo.svg
+│   ├── components/                    # Các component UI tái sử dụng
+│   │   ├── Button.tsx                 # Button component
+│   │   ├── ServiceCard.tsx            # Card dịch vụ
+│   │   └── Modal.tsx                  # Modal hiển thị thông tin chi tiết
+│   ├── context/                       # Contexts cho quản lý trạng thái toàn ứng dụng
+│   │   └── ServiceContext.tsx         # Context quản lý dịch vụ
+│   ├── hooks/                         # Các hooks tùy chỉnh
+│   │   └── useService.ts              # Hook sử dụng dịch vụ
+│   ├── pages/                         # Các trang chính của ứng dụng
+│   │   ├── Home.tsx                   # Trang chính
+│   │   ├── ServiceSelection.tsx       # Trang chọn dịch vụ
+│   │   ├── Payment.tsx                # Trang thanh toán
+│   │   └── Result.tsx                 # Trang kết quả
+│   ├── services/                      # Các dịch vụ API
+│   │   └── serviceApi.ts              # API gọi tới backend
+│   ├── utils/                         # Các hàm tiện ích và helper
+│   │   └── validate.ts                # Hàm kiểm tra tính hợp lệ của dữ liệu
+│   ├── App.tsx                        # Tệp chính khởi tạo ứng dụng React
+│   └── index.tsx                      # Điểm vào chính cho React
+│
+├── tailwind.config.ts                 # Cấu hình Tailwind
+├── tsconfig.json                      # Cấu hình TypeScript
+└── package.json                       # Quản lý phụ thuộc
+```
+
+#### **Các tệp chính frontend**
+
+1. **App.tsx**
+    
+    - Là nơi cấu hình cấu trúc chính của ứng dụng và điều hướng giữa các trang.
+        
+2. **ServiceSelection.tsx**
+    
+    - Hiển thị các loại dịch vụ và giúp người dùng chọn dịch vụ mong muốn.
+        
+3. **validate.ts**
+    
+    - Chứa các hàm kiểm tra tính hợp lệ của dữ liệu đầu vào, ví dụ như kiểm tra giá trị ngày giờ hợp lệ, các lựa chọn dịch vụ hợp lệ.
+        
+
+---
+
+### **Backend (Node.js + Express + TypeScript)**
+
+```
+backend/
+│
+├── src/
+│   ├── controllers/                   # Các controller xử lý logic
+│   │   ├── serviceController.ts       # Xử lý logic liên quan đến dịch vụ
+│   │   ├── userController.ts          # Xử lý logic liên quan đến người dùng
+│   ├── enums/                         # Các enum (chẳng hạn trạng thái đơn, loại mẫu)
+│   │   └── serviceEnums.ts            # Enum cho trạng thái dịch vụ, loại mẫu
+│   ├── middlewares/                   # Các middleware xử lý lỗi, xác thực
+│   │   └── errorMiddleware.ts         # Xử lý lỗi toàn ứng dụng
+│   ├── models/                        # Các mô hình (schema) của database
+│   │   └── serviceModel.ts            # Mô hình dịch vụ
+│   ├── routes/                        # Các route API
+│   │   └── serviceRoutes.ts           # Các route cho dịch vụ
+│   ├── types/                         # Các type/ interface cho dữ liệu
+│   │   ├── serviceTypes.ts           # Interface cho các đối tượng dịch vụ
+│   │   └── userTypes.ts              # Interface cho người dùng
+│   ├── utils/                         # Các hàm tiện ích và helper
+│   │   └── validate.ts                # Hàm kiểm tra dữ liệu đầu vào (validate)
+│   ├── app.ts                         # Cấu hình Express và các middleware
+│   └── server.ts                      # Điểm vào chính để khởi động server
+│
+├── tsconfig.json                      # Cấu hình TypeScript cho backend
+└── package.json                       # Quản lý phụ thuộc
+```
+
+#### **Các tệp chính backend**
+
+1. **serviceController.ts**
+    
+    - Chứa các hàm xử lý logic dịch vụ như đăng ký, thanh toán, xác nhận kết quả.
+        
+2. **errorMiddleware.ts**
+    
+    - Xử lý các lỗi toàn hệ thống và trả về lỗi chi tiết.
+        
+3. **serviceEnums.ts**
+    
+    - Chứa các enum như loại mẫu (2 mẫu, 3 mẫu), trạng thái đơn (đang chờ thanh toán, đã có kết quả), cách lấy mẫu (tại nhà, tại cơ sở).
+        
+4. **serviceRoutes.ts**
+    
+    - Định nghĩa các route API cho dịch vụ, như `/services`, `/services/{id}`, `/register-service`.
+        
+5. **serviceModel.ts**
+    
+    - Mô hình cơ sở dữ liệu cho dịch vụ với các trường như tên, giá cả, mô tả.
+        
+
+---
+
+### **Database (SQL Server)**
+
+```sql
+-- Tạo bảng dịch vụ
+CREATE TABLE Services (
+    ServiceID INT PRIMARY KEY IDENTITY,         -- Mã dịch vụ
+    ServiceName NVARCHAR(100),                  -- Tên dịch vụ
+    Description NVARCHAR(255),                  -- Mô tả dịch vụ
+    Category NVARCHAR(50),                      -- Phân loại dịch vụ (Hành chính pháp lý, Dân sự)
+    SampleCount INT,                            -- Số mẫu (2 hoặc 3)
+    CreatedAt DATETIME DEFAULT GETDATE()        -- Thời gian tạo dịch vụ
+);
+
+-- Tạo bảng chi tiết giá
+CREATE TABLE PriceDetails (
+    PriceID INT PRIMARY KEY IDENTITY,           -- Mã chi phí
+    ServiceID INT FOREIGN KEY REFERENCES Services(ServiceID), -- Liên kết đến bảng Services
+    Price DECIMAL(18, 2)                        -- Giá dịch vụ
+);
+
+-- Tạo bảng người dùng (khách hàng, nhân viên)
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY, 
+    FullName NVARCHAR(100), 
+    Email NVARCHAR(100),
+    UserType NVARCHAR(50)  -- "Customer", "Staff", "Admin"
+);
+```
+
+---
+
+### **Xử lý lỗi, ràng buộc và validate**
+
+- **Xử lý lỗi**: Dùng `errorMiddleware.ts` trong backend để xử lý các lỗi toàn hệ thống như lỗi database, lỗi không tìm thấy dữ liệu, lỗi xác thực.
+    
+- **Ràng buộc dữ liệu**: Các yêu cầu ràng buộc được đặt trong `validate.ts` cho frontend và backend để đảm bảo các trường như giá trị mẫu, ngày giờ hợp lệ.
+    
+- **Enum**: Dùng Enum cho trạng thái dịch vụ, loại mẫu, cách lấy mẫu trong cả frontend và backend.
+    
+- **Interface**: Sử dụng interface cho các loại dữ liệu quan trọng như `Service`, `User`, `Payment`, giúp đảm bảo kiểu dữ liệu chính xác trong quá trình phát triển.
+    
+
+---
+
+### **Chạy ứng dụng**
+
+1. **Frontend**:
+    
+    - Cài đặt phụ thuộc: `yarn install`
+        
+    - Chạy ứng dụng: `yarn dev`
+        
+2. **Backend**:
+    
+    - Cài đặt phụ thuộc: `yarn install`
+        
+    - Chạy server: `yarn start`
+        
+
+---
+
+Với cấu trúc này, bạn có thể dễ dàng mở rộng và phát triển hệ thống theo từng phần (frontend, backend, và database), đồng thời bảo đảm tính nhất quán và tuân thủ quy trình dịch vụ.

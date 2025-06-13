@@ -28,7 +28,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 4.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -43,10 +43,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 4"
+              "title": "02-serverNodejs"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -229,7 +230,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Requirement SWP.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -257,7 +258,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Requirement SWP"
+              "title": "Graph of 02-serverNodejs"
             }
           }
         ]
@@ -306,16 +307,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5fd08c20f3f5de9f",
+  "active": "85bd848a12a360a2",
   "lastOpenFiles": [
-    "Untitled 4.md",
     "Requirement SWP.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
+    "Untitled 4.md",
     "Untitled 3.md",
     "My Brain/1. ARCHIEVED/Full Stack/Git/03-GitNangCao.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/02-TwitterProjectSchema.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "Untitled 1.md",
     "Untitled 2.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
