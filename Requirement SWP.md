@@ -283,177 +283,148 @@ Tùy theo số mẫu (2 hoặc 3), yêu cầu **điền đủ thông tin cho t�
   
   
 
+1. Frontend (React + Vite + Tailwind + TypeScript)
+File Structure:
 
-Dưới đây là cấu trúc file cho cả frontend và backend của dự án của bạn, sử dụng React Vite + Tailwind CSS + TypeScript cho frontend và Node.js + Express + TypeScript cho backend. Cấu trúc này cũng bao gồm việc xử lý lỗi, ràng buộc, enum, validate, interface, type, phù hợp với các yêu cầu của luồng dịch vụ.
 
----
+/src
+  /assets
+    /images
+  /components
+    /auth
+      Login.tsx
+      Register.tsx
+      ResetPassword.tsx
+    /service
+      ServiceList.tsx
+      ServiceDetail.tsx
+      ServiceForm.tsx
+    /common
+      Button.tsx
+      Input.tsx
+      Modal.tsx
+  /context
+    AuthContext.tsx
+  /hooks
+    useAuth.ts
+  /pages
+    Home.tsx
+    Dashboard.tsx
+    ServicePage.tsx
+  /services
+    authService.ts
+    serviceService.ts
+  /utils
+    api.ts
+    validation.ts
+  App.tsx
+  index.tsx
+  tailwind.config.js
+  tsconfig.json
+  package.json
+Key Concepts:
 
-### **Frontend (React Vite + Tailwind + TypeScript)**
+Context: For managing global state like authentication and roles.
 
-```
-frontend/
-│
-├── public/                            # Các tài nguyên công cộng
-│   └── index.html                     # Tệp HTML chính
-│
-├── src/
-│   ├── assets/                        # Các tài nguyên như ảnh, biểu tượng
-│   │   └── logo.svg
-│   ├── components/                    # Các component UI tái sử dụng
-│   │   ├── Button.tsx                 # Button component
-│   │   ├── ServiceCard.tsx            # Card dịch vụ
-│   │   └── Modal.tsx                  # Modal hiển thị thông tin chi tiết
-│   ├── context/                       # Contexts cho quản lý trạng thái toàn ứng dụng
-│   │   └── ServiceContext.tsx         # Context quản lý dịch vụ
-│   ├── hooks/                         # Các hooks tùy chỉnh
-│   │   └── useService.ts              # Hook sử dụng dịch vụ
-│   ├── pages/                         # Các trang chính của ứng dụng
-│   │   ├── Home.tsx                   # Trang chính
-│   │   ├── ServiceSelection.tsx       # Trang chọn dịch vụ
-│   │   ├── Payment.tsx                # Trang thanh toán
-│   │   └── Result.tsx                 # Trang kết quả
-│   ├── services/                      # Các dịch vụ API
-│   │   └── serviceApi.ts              # API gọi tới backend
-│   ├── utils/                         # Các hàm tiện ích và helper
-│   │   └── validate.ts                # Hàm kiểm tra tính hợp lệ của dữ liệu
-│   ├── App.tsx                        # Tệp chính khởi tạo ứng dụng React
-│   └── index.tsx                      # Điểm vào chính cho React
-│
-├── tailwind.config.ts                 # Cấu hình Tailwind
-├── tsconfig.json                      # Cấu hình TypeScript
-└── package.json                       # Quản lý phụ thuộc
-```
+Components: Login, Registration, and Service-specific components.
 
-#### **Các tệp chính frontend**
+Services: API calls related to authentication and services.
 
-1. **App.tsx**
-    
-    - Là nơi cấu hình cấu trúc chính của ứng dụng và điều hướng giữa các trang.
-        
-2. **ServiceSelection.tsx**
-    
-    - Hiển thị các loại dịch vụ và giúp người dùng chọn dịch vụ mong muốn.
-        
-3. **validate.ts**
-    
-    - Chứa các hàm kiểm tra tính hợp lệ của dữ liệu đầu vào, ví dụ như kiểm tra giá trị ngày giờ hợp lệ, các lựa chọn dịch vụ hợp lệ.
-        
+Validation: Input validation, especially for service registration
 
----
+Backend Folder Structure
+bash
+Copy
+/src
+  /config
+    config.ts                  # Environment configuration, DB connection setup
+    database.ts                # SQL Server database connection configuration
+  /constants
+    roles.ts                   # Constants related to user roles
+    serviceTypes.ts            # Constants for service types (Administrative, Civil)
+  /middlewares
+    authMiddleware.ts          # Token validation middleware
+    errorMiddleware.ts         # Global error handling middleware
+    validationMiddleware.ts    # Input validation middleware
+  /controllers
+    authController.ts          # Handles login, registration, password change
+    serviceController.ts       # Handles CRUD operations for services
+    userController.ts          # Handles user profile management
+  /services
+    authService.ts             # Authentication and account management logic
+    serviceService.ts          # Business logic related to services
+    userService.ts             # Logic for user profile and account management
+  /models
+    Account.ts                 # User account model (attributes and relations)
+    Role.ts                    # User role model
+    Service.ts                 # Service model (for service-related data)
+    UserProfile.ts             # User profile model
+    RefreshToken.ts            # Refresh token model for handling JWT refresh tokens
+  /routes
+    authRoutes.ts              # Routes for login, registration, password reset
+    serviceRoutes.ts           # Routes for managing services (CRUD)
+    userRoutes.ts              # Routes for user profile and account management
+  /utils
+    api.ts                     # Utility functions for API calls (for frontend integration)
+    email.ts                   # Email utility functions for sending notifications
+    validation.ts              # Utility functions for validating inputs
+  app.ts                        # Express setup and app initialization
+  tsconfig.json                # TypeScript configuration
+  package.json                 # Package dependencies and scripts
+  .env                          # Environment variables (e.g., DB credentials, JWT secret)
+Folder and File Descriptions
+1. /config
+config.ts: Contains environment configuration like server port, database connection setup, JWT secret, etc.
 
-### **Backend (Node.js + Express + TypeScript)**
+database.ts: Database connection configuration to SQL Server using Sequelize or any other SQL library.
 
-```
-backend/
-│
-├── src/
-│   ├── controllers/                   # Các controller xử lý logic
-│   │   ├── serviceController.ts       # Xử lý logic liên quan đến dịch vụ
-│   │   ├── userController.ts          # Xử lý logic liên quan đến người dùng
-│   ├── enums/                         # Các enum (chẳng hạn trạng thái đơn, loại mẫu)
-│   │   └── serviceEnums.ts            # Enum cho trạng thái dịch vụ, loại mẫu
-│   ├── middlewares/                   # Các middleware xử lý lỗi, xác thực
-│   │   └── errorMiddleware.ts         # Xử lý lỗi toàn ứng dụng
-│   ├── models/                        # Các mô hình (schema) của database
-│   │   └── serviceModel.ts            # Mô hình dịch vụ
-│   ├── routes/                        # Các route API
-│   │   └── serviceRoutes.ts           # Các route cho dịch vụ
-│   ├── types/                         # Các type/ interface cho dữ liệu
-│   │   ├── serviceTypes.ts           # Interface cho các đối tượng dịch vụ
-│   │   └── userTypes.ts              # Interface cho người dùng
-│   ├── utils/                         # Các hàm tiện ích và helper
-│   │   └── validate.ts                # Hàm kiểm tra dữ liệu đầu vào (validate)
-│   ├── app.ts                         # Cấu hình Express và các middleware
-│   └── server.ts                      # Điểm vào chính để khởi động server
-│
-├── tsconfig.json                      # Cấu hình TypeScript cho backend
-└── package.json                       # Quản lý phụ thuộc
-```
+2. /constants
+roles.ts: Defines constants for user roles like Customer, Admin, Staff, etc.
 
-#### **Các tệp chính backend**
+serviceTypes.ts: Constants for service types such as Administrative and Civil.
 
-1. **serviceController.ts**
-    
-    - Chứa các hàm xử lý logic dịch vụ như đăng ký, thanh toán, xác nhận kết quả.
-        
-2. **errorMiddleware.ts**
-    
-    - Xử lý các lỗi toàn hệ thống và trả về lỗi chi tiết.
-        
-3. **serviceEnums.ts**
-    
-    - Chứa các enum như loại mẫu (2 mẫu, 3 mẫu), trạng thái đơn (đang chờ thanh toán, đã có kết quả), cách lấy mẫu (tại nhà, tại cơ sở).
-        
-4. **serviceRoutes.ts**
-    
-    - Định nghĩa các route API cho dịch vụ, như `/services`, `/services/{id}`, `/register-service`.
-        
-5. **serviceModel.ts**
-    
-    - Mô hình cơ sở dữ liệu cho dịch vụ với các trường như tên, giá cả, mô tả.
-        
+3. /middlewares
+authMiddleware.ts: Checks if the user's token is valid. If invalid or missing, it returns an unauthorized error.
 
----
+errorMiddleware.ts: Handles global errors and returns appropriate error messages to the client.
 
-### **Database (SQL Server)**
+validationMiddleware.ts: Handles input validation for request bodies (e.g., checking if email, password, and other inputs meet required criteria).
 
-```sql
--- Tạo bảng dịch vụ
-CREATE TABLE Services (
-    ServiceID INT PRIMARY KEY IDENTITY,         -- Mã dịch vụ
-    ServiceName NVARCHAR(100),                  -- Tên dịch vụ
-    Description NVARCHAR(255),                  -- Mô tả dịch vụ
-    Category NVARCHAR(50),                      -- Phân loại dịch vụ (Hành chính pháp lý, Dân sự)
-    SampleCount INT,                            -- Số mẫu (2 hoặc 3)
-    CreatedAt DATETIME DEFAULT GETDATE()        -- Thời gian tạo dịch vụ
-);
+4. /controllers
+authController.ts: Handles authentication requests such as login, registration, and password reset. Calls relevant services to perform the business logic and sends responses.
 
--- Tạo bảng chi tiết giá
-CREATE TABLE PriceDetails (
-    PriceID INT PRIMARY KEY IDENTITY,           -- Mã chi phí
-    ServiceID INT FOREIGN KEY REFERENCES Services(ServiceID), -- Liên kết đến bảng Services
-    Price DECIMAL(18, 2)                        -- Giá dịch vụ
-);
+serviceController.ts: Handles CRUD operations for services (e.g., adding a new service, getting service details).
 
--- Tạo bảng người dùng (khách hàng, nhân viên)
-CREATE TABLE Users (
-    UserID INT PRIMARY KEY IDENTITY, 
-    FullName NVARCHAR(100), 
-    Email NVARCHAR(100),
-    UserType NVARCHAR(50)  -- "Customer", "Staff", "Admin"
-);
-```
+userController.ts: Handles user-related operations such as updating user information and retrieving user profiles.
 
----
+5. /services
+authService.ts: Contains business logic for user authentication, such as registering a user, logging in, creating a JWT token, and managing password hashes.
 
-### **Xử lý lỗi, ràng buộc và validate**
+serviceService.ts: Business logic for handling service-related operations like creating new services, retrieving all services, and updating service information.
 
-- **Xử lý lỗi**: Dùng `errorMiddleware.ts` trong backend để xử lý các lỗi toàn hệ thống như lỗi database, lỗi không tìm thấy dữ liệu, lỗi xác thực.
-    
-- **Ràng buộc dữ liệu**: Các yêu cầu ràng buộc được đặt trong `validate.ts` cho frontend và backend để đảm bảo các trường như giá trị mẫu, ngày giờ hợp lệ.
-    
-- **Enum**: Dùng Enum cho trạng thái dịch vụ, loại mẫu, cách lấy mẫu trong cả frontend và backend.
-    
-- **Interface**: Sử dụng interface cho các loại dữ liệu quan trọng như `Service`, `User`, `Payment`, giúp đảm bảo kiểu dữ liệu chính xác trong quá trình phát triển.
-    
+userService.ts: Logic for managing user profiles, updating user data, and ensuring proper role-based access control.
 
----
+6. /models
+Account.ts: Defines the user account model with fields like Email, PasswordHash, RoleID, and relationships with the Role model.
 
-### **Chạy ứng dụng**
+Role.ts: Defines roles for users such as Admin, Staff, Customer.
 
-1. **Frontend**:
-    
-    - Cài đặt phụ thuộc: `yarn install`
-        
-    - Chạy ứng dụng: `yarn dev`
-        
-2. **Backend**:
-    
-    - Cài đặt phụ thuộc: `yarn install`
-        
-    - Chạy server: `yarn start`
-        
+Service.ts: Defines the service model, including attributes such as Name, Price, Description, ServiceType, etc.
 
----
+UserProfile.ts: Defines the user profile model, storing user-specific data like FullName, PhoneNumber, Address, etc.
 
-Với cấu trúc này, bạn có thể dễ dàng mở rộng và phát triển hệ thống theo từng phần (frontend, backend, và database), đồng thời bảo đảm tính nhất quán và tuân thủ quy trình dịch vụ.
+RefreshToken.ts: Stores refresh tokens for JWT to allow the user to refresh their authentication token.
+
+7. /routes
+authRoutes.ts: Handles the routes for login, registration, and password reset operations.
+
+serviceRoutes.ts: Defines routes for CRUD operations for services.
+
+userRoutes.ts: Routes for managing user accounts and profiles.
+
+8. /utils
+api.ts: Utility functions for making API calls from the frontend to the backend.
+
+email.ts: Functions for sending emails (e.g., registration confirmation, password reset emails).
+
+validation.ts: Utility functions for validating inputs like email, password, etc.

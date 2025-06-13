@@ -46,8 +46,7 @@
               "title": "02-serverNodejs"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -230,7 +229,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+                "file": "Requirement SWP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -258,7 +257,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 02-serverNodejs"
+              "title": "Graph of Requirement SWP"
             }
           }
         ]
@@ -307,10 +306,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "85bd848a12a360a2",
+  "active": "5fd08c20f3f5de9f",
   "lastOpenFiles": [
-    "Requirement SWP.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+    "Requirement SWP.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "Untitled 4.md",
     "Untitled 3.md",
