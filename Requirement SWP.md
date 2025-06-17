@@ -481,7 +481,7 @@ Backend Folder Structure
     - A configuration file that stores environment variables (such as `DB_HOST`, `DB_USER`, `JWT_SECRET`). This allows you to keep sensitive information outside the source code and change configuration settings easily based on the environment.
       
 +yêu cầu 2: đọc và phân tích đày đủ chi tiết:
-4 role customer,staff,manager,admin thì làm luồng đăng kí(bằng email,password,confirmPassword)(role customer là mặc định sau đó được admin phân lại khi thấy danh sách các đăng kí), đăng nhập(email ,password) ,access refresh token,đổi mật khẩu(chỉ cần có mật khẩu cũ), phân quyền do admin phân , với tài khoản admin là mặc định chỉ có 1 lưu trong .env 
+4 role customer,staff,manager,admin thì làm luồng đăng kí(bằng email,password,confirmPassword)(role customer là mặc định sau đó được admin phân lại khi thấy danh sách các đăng kí trong dashboard), đăng nhập(email ,password) ,access refresh token,đổi mật khẩu(chỉ cần có mật khẩu cũ), phân quyền do admin phân , với tài khoản admin là mặc định chỉ có 1 lưu trong .env 
 luồng chọn chọn dịch vụ:
 cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại dịch vụ hành chính và dân sự , trong 2 loại dịch vụ này sẽ có từng tên dịch vụ kèm giá cả ,trong từng dịch vụ sẽ lại có loại lấy 2 mẫu (ví dụ của cha và con) và loại lấy 3 mẫu(ví dụ cha mẹ con) , mấy cái dịch vụ này sẽ được admin quản lý crud
 
