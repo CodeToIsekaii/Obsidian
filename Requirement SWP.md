@@ -437,21 +437,7 @@ Backend Folder Structure
 - **`userService.ts`**:
     - This service layer handles business logic related to **user profiles**, such as updating user details and interacting with the `UserProfile` model.    
     - It might handle tasks like checking if a username is available or fetching the user's data from the database.       
-#### **7. `/models`** (Database Models)
-- **`Account.ts`**:
-    - Defines the **user account model** that includes fields like `email`, `passwordHash`, and `roleId`. This model maps to the `Accounts` table in the database.    
-    - It defines the relationships between different models (e.g., a user has a `Role`).    
-- **`Role.ts`**:
-    - Defines the **role model**, which might contain roles like `Admin`, `Customer`, `Staff`. It is linked to the `Account` model to assign a role to a user.    
-- **`Service.ts`**:
-    - Defines the **service model**, which contains attributes for services offered (name, description, price, etc.).    
-    - The `Service` model would map to a database table that stores the service records.    
-- **`UserProfile.ts`**:
-    - Defines the **user profile model**, which holds extra user information (e.g., `fullName`, `email`, `address`).    
-    - This model would be linked to the `Account` model via a foreign key (`accountId`).   
-- **`RefreshToken.ts`**:
-    - This model stores **refresh tokens** used to generate new JWT tokens without requiring the user to log in again. 
-    - Refresh tokens are stored with an expiration date to ensure that they are only valid for a limited time.
+
 #### **8. `/routes`** (Express Routes)
 - **`authRoutes.ts`**:
     - Defines the routes related to **authentication** operations, such as `/login`, `/register`, and `/reset-password`.   
