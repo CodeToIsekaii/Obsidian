@@ -785,3 +785,9 @@ Chạy lại migrations database nếu cần, để đảm bảo rằng cơ sở
 * And whether **the flow matches the diagram I provided above.**
 * **Be sure to mention all files you worked on or modified.**
 * **Stop only when everything runs 100% error-free.**
+
+App.tsx → ProtectedRoute.tsx → useAuth.ts → AuthContext.tsx
+                                    ↓
+                              authService.ts → api.ts → .env
+                                    ↓
+                              types.ts, validation.ts
