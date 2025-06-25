@@ -678,3 +678,110 @@ Chạy lại migrations database nếu cần, để đảm bảo rằng cơ sở
 
    * **Kiểm Tra Phản Hồi API**: Kiểm tra tất cả các điểm cuối API (qua Postman hoặc gọi trực tiếp từ frontend) để xác nhận rằng chúng trả về phản hồi chính xác.
    * **Kiểm Tra Giao Diện**: Kiểm tra các luồng giao diện người dùng và các tương tác của người dùng để đảm bảo rằng dữ liệu hiển thị đúng và lỗi được xử lý một cách thân thiện.
+
+
+
+✅ **OK, you have completed 100% as I requested based on the Arrow Dependency Map:**
+
+```
+[App.tsx] 
+ └──→ [ProtectedRoute.tsx] 
+       ───→ [useAuth.ts] 
+               ───▶ [AuthContext.tsx] 
+                      └──→ [authService.ts] 
+                               ───▶ [api.ts] 
+                                       └──▶ [.env] (VITE_API_URL)
+
+[main.tsx] 
+ └──▶ [App.tsx]
+
+[AuthContext.tsx] 
+ └──▶ [authService.ts] 
+       ───▶ [types.ts]
+
+[useAuth.ts] 
+ └──▶ [AuthContext.tsx]
+ └──▶ [authService.ts]
+       ───▶ [types.ts]
+
+[Register.tsx]
+ └──▶ [validation.ts]
+ └──▶ [authService.ts]
+ └──▶ [Input.tsx], [Button.tsx]
+
+[Login.tsx]
+ └──▶ [useAuth.ts]
+ └──▶ [Input.tsx], [Button.tsx]
+
+[Dashboard.tsx], [Home.tsx], [ServicePage.tsx] 
+ └──→ [ProtectedRoute.tsx]
+
+[AdminDashboard.tsx]
+ └──▶ [authService.ts]
+ └──▶ [types.ts]
+ └──▶ [useAuth.ts]
+ └──▶ [Input.tsx], [Button.tsx]
+
+[api.ts]
+ └──✅ OK handles blocking token here → [authService.ts]
+
+[validation.ts]
+ └──✅ OK: Used in [Register.tsx], [ChangePassword.tsx], [Profile.tsx]...
+
+[types.ts]
+ └──✅ OK: Used in:
+     ├─ [authService.ts]
+     ├─ [useAuth.ts]
+     ├─ [AuthContext.tsx]
+     ├─ [AdminDashboard.tsx]
+     └─ [ProtectedRoute.tsx]
+```
+
+---
+
+👉 **Grouped Summary:**
+
+* **Core flow:** `App.tsx`, `main.tsx`, `useAuth.ts`, `AuthContext.tsx`, `authService.ts`, `api.ts`, `.env`, `types.ts`
+* **Register/Login flow:** `Register.tsx`, `Login.tsx`, `validation.ts`, `Input.tsx`, `Button.tsx`
+* **Role management flow (Admin):** `AdminDashboard.tsx`, `useAuth.ts`, `authService.ts`, `types.ts`
+* **Protected route flow:** `ProtectedRoute.tsx`, `useAuth.ts`, `App.tsx`
+
+---
+
+🧠 **Memory tip:**
+
+* **Dependent files include:**
+
+  * `useAuth.ts` → `authService.ts`, `AuthContext.tsx`
+  * `authService.ts` → `api.ts`, `types.ts`
+  * `Register.tsx` → `authService.ts`, `validation.ts`, `Input.tsx`, `Button.tsx`
+  * `ProtectedRoute.tsx` → `useAuth.ts`, `types.ts`
+  * `App.tsx` → `ProtectedRoute.tsx`
+  * `AdminDashboard.tsx` → `authService.ts`, `useAuth.ts`
+
+---
+
+🛠️ **Note on Errors:**
+
+* Avoid using `any` type to prevent bugs.
+* Common potential issues:
+
+  * Variables defined but not used.
+  * Assigning nonexistent properties on type `undefined`.
+  * Unnecessary `catch` blocks.
+* If there is an error:
+
+  * Find and fix the relevant files or code snippets.
+  * Make sure **no new errors are created in other parts.**
+
+
+---
+
+✅ **After finishing, please describe:**
+
+* **How the page works.**
+* **How the files and components communicate.**
+* **How the flow runs through each file.**
+* And whether **the flow matches the diagram I provided above.**
+* **Be sure to mention all files you worked on or modified.**
+* **Stop only when everything runs 100% error-free.**
