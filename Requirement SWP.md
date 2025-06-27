@@ -467,7 +467,7 @@ Backend Folder Structure
     - A configuration file that stores environment variables (such as `DB_HOST`, `DB_USER`, `JWT_SECRET`). This allows you to keep sensitive information outside the source code and change configuration settings easily based on the environment.
       
 +yêu cầu 2: đọc và phân tích đày đủ chi tiết:
-4 role customer,staff,manager,admin thì làm luồng đăng kí(bằng email,password,confirmPassword)(role customer là mặc định sau đó được admin phân lại khi thấy danh sách các đăng kí trong dashboard), đăng nhập(email ,password) ,access refresh token,đổi mật khẩu(chỉ cần có mật khẩu cũ), phân quyền do admin phân , với tài khoản admin là mặc định chỉ có 1 lưu trong .env 
+4 role customer,staff,manager,admin thì làm luồng đăng kí(bằng email,password,confirmPassword,full name,phone number,address,date of birth,signature image)(role customer là mặc định sau đó được admin phân lại khi thấy danh sách các đăng kí trong dashboard), đăng nhập(email ,password) ,access refresh token,đổi mật khẩu(chỉ cần có mật khẩu cũ), phân quyền do admin phân , với tài khoản admin là mặc định chỉ có 1 lưu trong .env 
 luồng chọn chọn dịch vụ:
 cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại dịch vụ hành chính và dân sự , trong 2 loại dịch vụ này sẽ có từng tên dịch vụ kèm giá cả ,trong từng dịch vụ sẽ lại có loại lấy 2 mẫu (ví dụ của cha và con) và loại lấy 3 mẫu(ví dụ cha mẹ con) , mấy cái dịch vụ này sẽ được admin quản lý crud
 
@@ -681,113 +681,356 @@ Chạy lại migrations database nếu cần, để đảm bảo rằng cơ sở
 
 
 
-✅ **OK, you have completed 100% as I requested based on the Arrow Dependency Map:**
-
-```
-[App.tsx] 
- └──→ [ProtectedRoute.tsx] 
-       ───→ [useAuth.ts] 
-               ───▶ [AuthContext.tsx] 
-                      └──→ [authService.ts] 
-                               ───▶ [api.ts] 
-                                       └──▶ [.env] (VITE_API_URL)
-
-[main.tsx] 
- └──▶ [App.tsx]
-
-[AuthContext.tsx] 
- └──▶ [authService.ts] 
-       ───▶ [types.ts]
-
-[useAuth.ts] 
- └──▶ [AuthContext.tsx]
- └──▶ [authService.ts]
-       ───▶ [types.ts]
-
-[Register.tsx]
- └──▶ [validation.ts]
- └──▶ [authService.ts]
- └──▶ [Input.tsx], [Button.tsx]
-
-[Login.tsx]
- └──▶ [useAuth.ts]
- └──▶ [Input.tsx], [Button.tsx]
-
-[Dashboard.tsx], [Home.tsx], [ServicePage.tsx] 
- └──→ [ProtectedRoute.tsx]
-
-[AdminDashboard.tsx]
- └──▶ [authService.ts]
- └──▶ [types.ts]
- └──▶ [useAuth.ts]
- └──▶ [Input.tsx], [Button.tsx]
-
-[api.ts]
- └──✅ OK handles blocking token here → [authService.ts]
-
-[validation.ts]
- └──✅ OK: Used in [Register.tsx], [ChangePassword.tsx], [Profile.tsx]...
-
-[types.ts]
- └──✅ OK: Used in:
-     ├─ [authService.ts]
-     ├─ [useAuth.ts]
-     ├─ [AuthContext.tsx]
-     ├─ [AdminDashboard.tsx]
-     └─ [ProtectedRoute.tsx]
-```
+Here is the translation of the requirements you provided into English:
 
 ---
 
-👉 **Grouped Summary:**
+### **Requirement 2: Full Analysis and Details**
 
-* **Core flow:** `App.tsx`, `main.tsx`, `useAuth.ts`, `AuthContext.tsx`, `authService.ts`, `api.ts`, `.env`, `types.ts`
-* **Register/Login flow:** `Register.tsx`, `Login.tsx`, `validation.ts`, `Input.tsx`, `Button.tsx`
-* **Role management flow (Admin):** `AdminDashboard.tsx`, `useAuth.ts`, `authService.ts`, `types.ts`
-* **Protected route flow:** `ProtectedRoute.tsx`, `useAuth.ts`, `App.tsx`
+For the roles **customer, staff, manager, admin**, implement the following flow:
 
----
+1. **Registration Flow**: (via email, password, confirmPassword, full name, phone number, address, date of birth, signature image)
 
-🧠 **Memory tip:**
+   * **Role**: Customer is the default role, which is later reassigned by the admin after reviewing the list of registrations on the dashboard.
+   * **Login**: (via email, password) with **access and refresh tokens**.
+   * **Password Change**: Only the old password is required.
+   * **Role Assignment**: Managed by the admin.
+   * **Admin Role**: By default, there is only one admin stored in `.env`.
 
-* **Dependent files include:**
+2. **Service Selection Flow**:
 
-  * `useAuth.ts` → `authService.ts`, `AuthContext.tsx`
-  * `authService.ts` → `api.ts`, `types.ts`
-  * `Register.tsx` → `authService.ts`, `validation.ts`, `Input.tsx`, `Button.tsx`
-  * `ProtectedRoute.tsx` → `useAuth.ts`, `types.ts`
-  * `App.tsx` → `ProtectedRoute.tsx`
-  * `AdminDashboard.tsx` → `authService.ts`, `useAuth.ts`
+   * Upon **login**, customers access the **Services Page**.
+   * The page displays **two service categories**:
 
----
+     * **Administrative Services**
+     * **Civil Services**
+   * When clicking on each tab, the system displays a **list of services** under the respective category. Each service contains the following information:
 
-🛠️ **Note on Errors:**
-
-* Avoid using `any` type to prevent bugs.
-* Common potential issues:
-
-  * Variables defined but not used.
-  * Assigning nonexistent properties on type `undefined`.
-  * Unnecessary `catch` blocks.
-* If there is an error:
-
-  * Find and fix the relevant files or code snippets.
-  * Make sure **no new errors are created in other parts.**
-
+     * Service Name
+     * Price
+     * Description
+     * Sample Type (2 samples or 3 samples)
+     * **Choose** Button
 
 ---
 
-✅ **After finishing, please describe:**
+### **2. Service Selection**
 
-* **How the page works.**
-* **How the files and components communicate.**
-* **How the flow runs through each file.**
-* And whether **the flow matches the diagram I provided above.**
-* **Be sure to mention all files you worked on or modified.**
-* **Stop only when everything runs 100% error-free.**
+* When a customer clicks the **Choose** button for a service, the system will display **service details**:
 
-App.tsx → ProtectedRoute.tsx → useAuth.ts → AuthContext.tsx
-                                    ↓
-                              authService.ts → api.ts → .env
-                                    ↓
-                              types.ts, validation.ts
+  * Service Type (Administrative or Civil)
+  * Service Name and Description
+  * Price
+  * Sample Type (2 or 3 samples)
+  * Sample Collection Method:
+
+    * Administrative: **Only at the center**
+    * Civil: Choose between **at home** or **at the center**
+  * The interface displays a **Confirm** button. When clicked:
+
+    * If the service is **at the center**, the customer will be prompted to **select a date and time**.
+    * If the service is **at home**, no date/time selection is required.
+
+---
+
+### **3. Service Registration**
+
+* After confirming the service and selecting a date and time (if applicable), the customer clicks **Register**.
+* The system redirects to the **VNPay payment page**.
+* **Note**: Customers are allowed to reschedule only **24 hours prior** to the scheduled time.
+
+---
+
+## 📌 **Service Flow Processing by Type**
+
+### 🔸 **Administrative Services** (Only sample collection at the center)
+
+1. After successful payment, the **registration is automatically created** in the system.
+2. Staff sees the order on the system, **opens and confirms** the order.
+3. Staff enters information for the sample provider (depending on the number of samples):
+
+   * Name
+   * Date of Birth
+   * Gender
+   * Relationship
+   * Sample Type
+   * Commitment
+   * Customer and Staff Signature Photos
+
+     * If the signature photo exists in **UserProfile**, the system auto-fills.
+4. Staff enters the **kit code** (e.g., K01), then clicks **Send**.
+5. The order moves to the **Undergoing Test** status.
+6. Staff inputs test results.
+7. The **Manager** confirms the test results.
+8. Staff clicks **Return Results** → The order moves to the **Results Available** status.
+9. The customer sees the results and can **download the results as a PDF**.
+
+---
+
+### 🔸 **Civil Services**
+
+#### 👉 **Home Sample Collection**
+
+1. After successful payment, the **registration is automatically created** in the system.
+2. Staff sees the order, opens and confirms → enters the **kit code** and attaches the staff signature photo (auto-filled if available in **UserProfile**).
+3. Clicks **Send** → the order moves to **Kit Sent** status.
+4. The customer receives the kit, opens the order, and enters information for the sample provider (based on the number of samples selected):
+
+   * Name
+   * Date of Birth
+   * Gender
+   * Relationship
+   * Sample Type
+   * Commitment
+   * Signature Photo (auto-filled if available in **UserProfile**)
+5. Customer clicks **Send**.
+6. Staff receives the sample, clicks **Confirm** → the order moves to **Undergoing Test**.
+7. Staff inputs test results.
+8. Manager confirms the test results.
+9. Staff sends results → the order moves to **Results Available**.
+10. Customer views the results on the system and can **download as a PDF**.
+
+#### 👉 **Sample Collection at the Center**
+
+1. After successful payment, the **registration is automatically created** in the system.
+2. Staff sees the order, opens and confirms it.
+3. Staff enters information for the sample provider (depending on the number of samples selected):
+
+   * Name
+   * Date of Birth
+   * Gender
+   * Relationship
+   * Sample Type
+   * Commitment
+   * Signature Photos of both customer and staff (auto-filled if available in **UserProfile**)
+4. Staff enters the **kit code** (e.g., K01) and clicks **Send**.
+5. The order moves to **Undergoing Test** status.
+6. Staff enters the test results.
+7. The **Manager** confirms the test results.
+8. Staff clicks **Return Results** → the order moves to the **Results Available** status.
+9. Customer sees the results and can **download as a PDF**.
+
+---
+
+## ✅ **1. Validate & Constraints for Services**
+
+### 1.1. **On the Service Selection Page**
+
+* ✅ **Service Type** must be either "Administrative" or "Civil".
+* ✅ **Price** must be greater than 0.
+* ✅ **Number of Samples** must be either **2** or **3**.
+* ✅ **Sample Collection Method**:
+
+  * **Administrative**: Only allows **at the center**.
+  * **Civil**: Allows **at home** or **at the center**.
+* ✅ **Service Name** must be unique within each category.
+* ✅ **Each service** must have a description (cannot be empty).
+
+---
+
+### 2.1 **Service Registration Validation**
+
+* **Service information** is auto-filled into the registration, and users cannot edit it:
+
+  * Service Type
+  * Service Name
+  * Price
+  * Number of Samples
+  * Sample Collection Method
+
+---
+
+### 2.2 **Date and Time Selection for Sample Collection**
+
+* **Only applies to sample collection at the center**.
+* The date and time must be in the **future**, at least **24 hours from the current time**.
+* The selected time cannot exceed the center's operational hours (e.g., only accepts samples from 8:00 AM to 5:00 PM).
+* **Rescheduling** is not allowed if the appointment is **less than 24 hours away**.
+
+---
+
+### 3. **Payment Validation**
+
+* ✅ Payment is **mandatory** via **VNPay** (orders without payment cannot be created).
+* ✅ Payment status must be **successful** to continue the process.
+* ✅ Each order can only be paid for **once**.
+
+---
+
+### 4. **Sample Provider Information Validation**
+
+* For **2 or 3 samples**, complete the required information for each individual:
+
+  * Name: cannot be empty, max 100 characters.
+  * Date of Birth: a number, within a reasonable range (e.g., from 1900 to the current year).
+  * Gender: must select "Male" or "Female".
+  * Relationship: cannot be empty.
+  * Sample Type: must be in a valid list (e.g., "Oral mucosa", "Hair", etc.).
+  * Commitment: checkbox must be ticked before sending.
+  * Signature Photo:
+
+    * If available in **UserProfile**, it auto-fills.
+    * If not, the user must upload a signature before submitting.
+
+---
+
+### 5. **Kit Code Validation**
+
+* ✅ The kit code must be a string starting with **K** followed by a number (e.g., K01, K12,...).
+* ✅ The kit code **cannot be duplicated** across orders.
+* ✅ The kit code must be entered before submitting the order for testing.
+
+---
+
+### 6. **Order Status Constraints**
+
+* Order statuses are defined clearly and can only transition in the valid flow:
+  Pending Payment → Paid → Confirmed → Kit Sent (if at home) → Undergoing Test → Results Available
+* No skipping steps or reversing status.
+
+---
+
+### 7. **Test Result Input Constraints**
+
+* ✅ Only **assigned staff** can input test results.
+* ✅ Test results must be entered in a standard format.
+* ✅ After entry, the **Manager** must confirm the results before staff can send them to the customer.
+
+---
+
+### 8. **PDF Result Export**
+
+* Only customers with orders in the **"Results Available"** status can export the results to PDF.
+* The PDF must include:
+
+  * Service Information
+  * Sample Provider Information
+  * Test Results
+  * Results Return Date
+  * Digital Signature or Signature Image of Staff & Customer (if available)
+
+---
+
+### 9. **Security & Access Rights**
+
+* Customers can only view their own orders and results.
+* Staff can only view and edit orders assigned to them.
+* Managers can only confirm results, not edit the test content.
+* Admin has **CRUD access** to services but cannot interfere with order registrations.
+
+---
+
+### **Requirement 3: Check and do Requirement 2**
+
+* **Database**: If any tables are missing, create them based on the flow and requirements of **Requirement 2**, ensuring all proper constraints and relationships are in place. Use `int` as the `id` type (not `uuid`).
+* **Backend**: Implement using **axios**, **async/await**, and the provided structure.
+* **Frontend**: Use **React Router**, ensure proper handling of routes and state, apply **Prettier** and **ESLint** formatting.
+### **Requirement 4: Full Integration and Validation**
+
+#### 1. **Verify Frontend and Backend Integration**
+
+* **Ensure API Connection**: Confirm that the backend API (Express.js with TypeScript) is correctly connected to the frontend (React, Vite, TypeScript, and Tailwind CSS).
+* **Test All API Endpoints**: Ensure that all API endpoints from the backend (for services, user profiles, etc.) are accessible from the frontend and return accurate data.
+* **Handle Conflicts**: Check for any conflicts between frontend and backend files (e.g., variable names, file imports).
+* **Ensure Data Completeness**: Validate that all necessary data (e.g., service details, user profiles) is displayed fully on the frontend interface without any missing information.
+
+---
+
+#### 2. **Verify and Complete Database Configuration**
+
+* **Database Schema Check**:
+
+  * Ensure that all necessary tables (e.g., services, roles, users, refresh tokens, etc.) have been created and are correctly related.
+  * If any tables are missing, create them with full constraints and relationships (e.g., foreign keys, data types, unique constraints).
+  * For example: The **RefreshToken** table must store valid refresh tokens linked to users and have expiration times.
+
+* **Run Migrations**: Re-run database migrations if necessary to ensure that the database is set up correctly.
+
+---
+
+#### 3. **Review Existing Files**
+
+* **Reuse Existing Files**: Before creating new files, check if the required functionality already exists in the current codebase. If it does, **reuse the file** to avoid redundant code.
+* **Create New Files**: If new files are necessary, inform me of the **location** and **purpose** of the file to avoid errors and misconfigurations.
+
+---
+
+#### 4. **Frontend UI Requirements**
+
+* **Ensure UI Works by User Role**: Verify that the user interface functions correctly for each user role (Admin, Customer, Staff). Roles must have appropriate access to pages such as user profiles and service lists.
+* **Verify UI Pages**: Ensure that the **user profile page**, **service page**, and **service details page** are fully implemented and display data correctly.
+* **Check Responsive Design**: Ensure that the frontend, using **Tailwind CSS**, has a responsive design and displays correctly across various screen sizes.
+
+---
+
+#### 5. **Backend Requirements**
+
+* **Test API Endpoints**: Ensure that all **API endpoints** (POST, PUT, GET, DELETE) are functioning properly. Verify that the APIs return correct data to the frontend.
+* **Correct Data Handling**: Ensure that **data validation** is properly done both on the frontend (before submission) and backend (via middleware or service logic).
+* **Error Handling**: Ensure that the backend handles errors correctly when invalid data is submitted and that the frontend displays these errors in a user-friendly manner.
+* **Database Connection**: Ensure that the backend correctly connects to the database and that the API endpoints interact with the database without errors (e.g., CRUD operations for services, user profiles).
+
+---
+
+#### 6. **Common Tasks**
+
+* **Use Enums (If Necessary)**: Ensure **enum** is used for fixed values such as service types, order statuses, etc., if not already implemented.
+* **Configuration and Environment Variables**: Check that **configuration files** (such as `.env`) are correctly set up for both the frontend and backend, and that environment variables (like DB connection details, JWT secrets) are used properly.
+* **Data Consistency**: Ensure that the backend always returns **consistent data** so the frontend can display it correctly.
+
+---
+
+#### 7. **Testing**
+
+* **Test API Responses**: Test all API endpoints (using Postman or direct calls from the frontend) to confirm they return accurate responses.
+* **Test User Interface**: Test all user interface flows and interactions to ensure that data is displayed correctly and errors are handled in a user-friendly way.
+
+---
+
+By following these steps, you ensure that the integration between the frontend and backend works smoothly, that the database is configured properly, and that the UI and functionality meet the requirements.
+
+
+
+
+[main.tsx]
+  └──▶ [App.tsx]
+          ├──▶ [ProtectedRoute.tsx] ───▶ [hooks/useAuth.ts] ───▶ [context/AuthContext.tsx]
+          │                                               └──▶ [services/authService.ts] ───▶ [utils/api.ts]
+          │                                                                                 └──▶ [.env]
+          └──▶ [pages/*] (admin, staff, manager, customer)
+          
+[App.tsx] ───▶ [constants/messages.ts]         ← chứa các thông báo (VALIDATION, SUCCESS, ERROR...)
+         └──▶ [utils/validation.ts]            ← được dùng để validate dữ liệu trong các form
+         └──▶ [components/Common/*]            ← Header, Footer, Button, Input,...
+         └──▶ [components/Auth/*]              ← Login, Register, ResetPassword
+
+[Login.tsx] ───▶ [hooks/useAuth.ts] ───▶ [authService.ts]
+               └──▶ [utils/validation.ts]
+               └──▶ [constants/messages.ts]
+
+[Register.tsx] ───▶ [authService.ts]
+                  └──▶ [utils/validation.ts]
+                  └──▶ [constants/messages.ts]
+
+[ResetPassword.tsx] ───▶ [authService.ts]
+                       └──▶ [utils/validation.ts]
+
+[pages/admin/*.tsx] ───▶ [services/userService.ts], [services/managerService.ts], [services/serviceService.ts]
+                      └──▶ [components/Common/Input.tsx], [Button.tsx]
+
+[pages/staff/*.tsx] ───▶ [services/serviceService.ts], [components/Common]
+
+[pages/customer/*.tsx] ───▶ [components/Common], [services/serviceService.ts]
+
+[services/*.ts] ───▶ [utils/api.ts]
+                  └──▶ [utils/types.ts]
+
+[hooks/useAuth.ts] ───▶ [context/AuthContext.tsx]
+                     └──▶ [services/authService.ts]
+                     └──▶ [utils/types.ts]
+
+[context/AuthContext.tsx] ───▶ [services/authService.ts] ───▶ [utils/types.ts]
+
+[ProtectedRoute.tsx] ───▶ [hooks/useAuth.ts]
+
+_____________________________
