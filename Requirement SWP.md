@@ -505,59 +505,30 @@ cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại 
 ### 🔸 **Dịch vụ Hành chính** (Chỉ lấy mẫu tại cơ sở)
 1. Sau khi thanh toán thành công, **đơn đăng ký được hệ thống tự động tạo**.
 2. Nhân viên (staff) thấy đơn trên hệ thống, **mở đơn và xác nhận**.
-3. Nhân viên nhập thông tin người cung cấp mẫu (tùy theo số mẫu đã chọn):
-    - Họ tên
-    - Năm sinh
-    - Giới tính
-    - Mối quan hệ
-    - Loại mẫu
-    - Cam kết
-    - Ảnh chữ ký của khách hàng và staff
-        - Nếu đã có ảnh chữ ký sẵn trong **UserProfile**, hệ thống tự động chèn vào.
-4. Nhân viên nhập **mã kit** (ví dụ: K01), sau đó nhấn **Gửi**.
-5. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
-6. Staff nhập kết quả xét nghiệm.
-7. Quản lý (manager) xác nhận kết quả.
-8. Staff nhấn **Trả kết quả** → đơn chuyển sang trạng thái **Đã có kết quả**.
-9. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
+3. Nhân viên xác nhận lại mẫu mà khách hàng đăng ký và cập nhật trạng thái **Đã nhận mẫu**
+4. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
+5. Staff nhập kết quả xét nghiệm.
+6. Quản lý (manager) xác nhận kết quả.→ đơn chuyển sang trạng thái **Đã có kết quả**.
+7. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
 ----
 ### 🔸 **Dịch vụ Dân sự**
 #### 👉 **Lấy mẫu tại nhà*
 1. Sau khi khách hàng thanh toán thành công, **đơn đăng ký được tự động tạo**.
-2. Nhân viên thấy đơn, mở và xác nhận → nhập **mã kit** và chèn ảnh chữ ký staff (nếu có trong UserProfile, hệ thống tự động chèn).
+2. Nhân viên thấy đơn, mở và xác nhận →  **mã kit** trong TestAtHome và  ảnh chữ ký staff (nếu có trong UserProfile, hệ thống tự động chèn).
 3. Nhấn **Gửi** → đơn chuyển sang trạng thái **Đã gửi kit**.
-4. Khách hàng nhận kit, mở đơn và nhập thông tin người cung cấp mẫu (tùy vào số mẫu đã chọn):
-    - Họ tên
-    - Năm sinh
-    - Giới tính
-    - Mối quan hệ
-    - Loại mẫu
-    - Cam kết
-    - Ảnh chữ ký của tài khoản (tự động lấy nếu có sẵn trong UserProfile)
-5. Khách hàng nhấn **Gửi**.
-6. Nhân viên nhận mẫu, nhấn **Xác nhận** → đơn chuyển sang trạng thái **Đang xét nghiệm**.
-7. Staff nhập kết quả.
-8. Manager xác nhận kết quả.
-9. Staff gửi kết quả → trạng thái **Đã có kết quả**.
-10. Khách hàng xem kết quả trên hệ thống và có thể **xuất ra file PDF**.
+4. Khách hàng gửi lại kit nhấn **Gửi**.
+5. Nhân viên nhận mẫu, nhấn **Xác nhận** nếu sai thì cập nhật→ đơn chuyển sang trạng thái **Đang xét nghiệm**.
+6. Staff nhập kết quả.
+7. Manager xác nhận kết quả. → trạng thái **Đã có kết quả**.
+8. Khách hàng xem kết quả trên hệ thống và có thể **xuất ra file PDF**.
 #### 👉 **Lấy mẫu tại cơ sở**
 1. Sau khi thanh toán thành công, **đơn đăng ký được hệ thống tự động tạo**.
 2. Nhân viên (staff) thấy đơn trên hệ thống, **mở đơn và xác nhận**.
-3. Nhân viên nhập thông tin người cung cấp mẫu (tùy theo số mẫu đã chọn):
-    - Họ tên
-    - Năm sinh
-    - Giới tính
-    - Mối quan hệ
-    - Loại mẫu
-    - Cam kết
-    - Ảnh chữ ký của khách hàng và staff
-        - Nếu đã có ảnh chữ ký sẵn trong **UserProfile**, hệ thống tự động chèn vào.    
-4. Nhân viên nhập **mã kit** (ví dụ: K01), sau đó nhấn **Gửi**.
-5. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
-6. Staff nhập kết quả xét nghiệm.
-7. Quản lý (manager) xác nhận kết quả.
-8. Staff nhấn **Trả kết quả** → đơn chuyển sang trạng thái **Đã có kết quả**.
-9. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
+3. Nhân viên xác nhận lại mẫu mà khách hàng đăng ký và cập nhật trạng thái **Đã nhận mẫu**
+4. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
+5. Staff nhập kết quả xét nghiệm.
+6. Quản lý (manager) xác nhận kết quả.→ đơn chuyển sang trạng thái **Đã có kết quả**.
+7. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
    ---
 ## ✅ **1. Validate & Ràng buộc cho Dịch vụ**
 ### 1.1. **Tại giao diện chọn dịch vụ*
