@@ -1005,3 +1005,46 @@ Run database migrations if needed, to ensure DB is set up correctly.
 
 Let me know if you want it formatted in markdown or docx, or want any section further explained!
 
+
+[main.tsx]
+  └──▶ [App.tsx]
+          ├──▶ [ProtectedRoute.tsx] ───▶ [hooks/useAuth.ts] ───▶ [context/AuthContext.tsx]
+          │                                               └──▶ [services/authService.ts] ───▶ [utils/api.ts]
+          │                                                                                 └──▶ [.env]
+          └──▶ [pages/*] (admin, staff, manager, customer)
+          
+[App.tsx] ───▶ [constants/messages.ts]         ← chứa các thông báo (VALIDATION, SUCCESS, ERROR...)
+         └──▶ [utils/validation.ts]            ← được dùng để validate dữ liệu trong các form
+         └──▶ [components/Common/*]            ← Header, Footer, Button, Input,...
+         └──▶ [components/Auth/*]              ← Login, Register, ResetPassword
+
+[Login.tsx] ───▶ [hooks/useAuth.ts] ───▶ [authService.ts]
+               └──▶ [utils/validation.ts]
+               └──▶ [constants/messages.ts]
+
+[Register.tsx] ───▶ [authService.ts]
+                  └──▶ [utils/validation.ts]
+                  └──▶ [constants/messages.ts]
+
+[ResetPassword.tsx] ───▶ [authService.ts]
+                       └──▶ [utils/validation.ts]
+
+[pages/admin/*.tsx] ───▶ [services/userService.ts], [services/managerService.ts], [services/serviceService.ts]
+                      └──▶ [components/Common/Input.tsx], [Button.tsx]
+
+[pages/staff/*.tsx] ───▶ [services/serviceService.ts], [components/Common]
+
+[pages/customer/*.tsx] ───▶ [components/Common], [services/serviceService.ts]
+
+[services/*.ts] ───▶ [utils/api.ts]
+                  └──▶ [utils/types.ts]
+
+[hooks/useAuth.ts] ───▶ [context/AuthContext.tsx]
+                     └──▶ [services/authService.ts]
+                     └──▶ [utils/types.ts]
+
+[context/AuthContext.tsx] ───▶ [services/authService.ts] ───▶ [utils/types.ts]
+
+[ProtectedRoute.tsx] ───▶ [hooks/useAuth.ts]
+
+_____________________________
