@@ -23,12 +23,12 @@
             }
           },
           {
-            "id": "85bd848a12a360a2",
+            "id": "a90fdca3ba55826d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+                "file": "Untitled 5.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -43,10 +43,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02-serverNodejs"
+              "title": "Untitled 5"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -229,7 +230,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Requirement SWP.md",
+                "file": "Untitled 5.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -257,7 +258,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Requirement SWP"
+              "title": "Graph of Untitled 5"
             }
           }
         ]
@@ -306,10 +307,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5fd08c20f3f5de9f",
+  "active": "a90fdca3ba55826d",
   "lastOpenFiles": [
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
+    "Untitled 5.md",
     "Requirement SWP.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "Untitled 4.md",
     "Untitled 3.md",
@@ -341,7 +343,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/03-async-await.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/01-asynchronous-callback.md",
     "My Brain/1. ARCHIEVED/Full Stack/Database (SQL & NoSQL)/MongoDB/Cơ sở dữ liệu cơ bản.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/19.aws.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-433.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-431.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-432.png",
