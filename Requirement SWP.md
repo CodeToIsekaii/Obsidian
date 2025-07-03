@@ -1012,13 +1012,13 @@ Let me know if you want it formatted in markdown or docx, or want any section fu
           │                                               └──▶ [services/authService.ts] ────▶ [utils/api.ts]
           │                                                                                 └──▶ [.env]
           └──▶ [pages/*] (admin, staff, manager, customer)
-[App.tsx] ────▶ [constants/messages.ts]         ← chứa các thông báo (SUCCESS, ERROR...)
+[App.tsx] ────▶ [utils/messages.ts]         ← chứa các thông báo (SUCCESS, ERROR...)
          └──▶ [components/Common/*]            ← Header, Footer, Button, Input,...
          └──▶ [components/Auth/*]              ← Login, Register, ResetPassword
 [Login.tsx] ────▶ [hooks/useAuth.ts] ────▶ [authService.ts]
-               └──▶ [constants/messages.ts]
+               └──▶ [utils/messages.ts]
 [Register.tsx] ────▶ [authService.ts]
-                  └──▶ [constants/messages.ts]
+                  └──▶ [utils/messages.ts]
 [ResetPassword.tsx] ────▶ [authService.ts]
 [pages/admin/*.tsx] ────▶ [services/userService.ts], [services/managerService.ts], [services/serviceService.ts]
                       └──▶ [components/Common/Input.tsx], [Button.tsx]
