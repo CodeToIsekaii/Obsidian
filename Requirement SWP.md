@@ -1012,35 +1012,24 @@ Let me know if you want it formatted in markdown or docx, or want any section fu
           │                                               └──▶ [services/authService.ts] ────▶ [utils/api.ts]
           │                                                                                 └──▶ [.env]
           └──▶ [pages/*] (admin, staff, manager, customer)
-
 [App.tsx] ────▶ [constants/messages.ts]         ← chứa các thông báo (SUCCESS, ERROR...)
          └──▶ [components/Common/*]            ← Header, Footer, Button, Input,...
          └──▶ [components/Auth/*]              ← Login, Register, ResetPassword
-
 [Login.tsx] ────▶ [hooks/useAuth.ts] ────▶ [authService.ts]
                └──▶ [constants/messages.ts]
-
 [Register.tsx] ────▶ [authService.ts]
                   └──▶ [constants/messages.ts]
-
 [ResetPassword.tsx] ────▶ [authService.ts]
-
 [pages/admin/*.tsx] ────▶ [services/userService.ts], [services/managerService.ts], [services/serviceService.ts]
                       └──▶ [components/Common/Input.tsx], [Button.tsx]
-
 [pages/staff/*.tsx] ────▶ [services/serviceService.ts], [components/Common]
-
 [pages/customer/*.tsx] ────▶ [components/Common], [services/serviceService.ts]
-
 [services/*.ts] ────▶ [utils/api.ts]
                   └──▶ [utils/types.ts]
-
 [hooks/useAuth.ts] ────▶ [context/AuthContext.tsx]
                      └──▶ [services/authService.ts]
                      └──▶ [utils/types.ts]
-
 [context/AuthContext.tsx] ────▶ [services/authService.ts] ────▶ [utils/types.ts]
-
 [ProtectedRoute.tsx] ────▶ [hooks/useAuth.ts]
 
 
