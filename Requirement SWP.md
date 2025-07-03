@@ -1034,3 +1034,612 @@ Let me know if you want it formatted in markdown or docx, or want any section fu
 
 
 _____________________________
+// All admin routes require authentication and admin role
+
+// Get all users for role assignment
+
+router.get('/users', authenticate, authorize(['Admin']), userController.getAllUsers)
+
+// Update user role
+
+router.put('/users', authenticate, authorize(['Admin']), userController.updateUserRole)
+
+// Public routes
+
+router.post('/register', registerHandler)
+
+router.post('/login', loginHandler)
+
+router.post('/refresh-token', refreshAccessTokenHandler)
+
+router.post('/logout', logoutHandler)
+
+// Protected routes
+
+router.get('/profile', authenticate, userController.getProfile)
+
+router.put('/change-password', authenticate, PasswordChangeHandler)
+
+// Get all services (public)
+
+router.get('/', serviceController.getAllServices)
+
+router.get('/type/:serviceType', serviceController.getServiceByType)
+
+// Get service by ID (public)
+
+router.get('/:serviceId', serviceController.getServiceById)
+
+// Admin only routes
+
+router.post(
+
+'/',
+
+authenticate,
+
+authorize(['Admin']),
+
+serviceController.createService
+
+)
+
+router.put('/:serviceId', authenticate, authorize(['Admin']), serviceController.updateService)
+
+router.delete('/:serviceId', authenticate, authorize(['Admin']), serviceController.deleteService)
+
+const router = Router()
+
+router.get(
+
+'/testRequestCustomer',
+
+authenticate,
+
+authorize(['Customer']),
+
+testRequestController.getTestRequestByCustomer
+
+)
+
+router.get('/testRequestStaff', authenticate, authorize(['Staff']), testRequestController.getTestRequestByStaff)
+
+router.get('/', authenticate, authorize(['Staff']), testRequestController.getAllTestRequests)
+
+router.post('/', authenticate, authorize(['Customer']), testRequestController.createTestRequest)
+
+router.put(
+
+'/:testRequestId/submit-sample',
+
+authenticate,
+
+authorize(['Customer']),
+
+testRequestController.submitSampleInfo
+
+)
+
+router.get('/:testRequestId/pdf', authenticate, testRequestController.exportTestResultsPDF)
+
+// router.get('/:testRequestId', authenticate, testRequestController.getTestRequestById)
+
+router.put('/:testRequestId/confirm', authenticate, authorize(['Staff']), testRequestController.createTestConfirm)
+
+router.put('/:testRequestId/in-progress', authenticate, authorize(['Staff']), testRequestController.markInProgress)
+
+router.post(
+
+'/:testRequestId/createTestResult',
+
+authenticate,
+
+authorize(['Staff']),
+
+testRequestController.createTestResultbyStaff
+
+)
+
+router.get('/viewCreateTestResult', authenticate, authorize(['Manager']), testRequestController.viewCreateTestResult)
+
+router.put(
+
+'/:testResultId/verifyTestResult',
+
+authenticate,
+
+authorize(['Manager']),
+
+testRequestController.verifyTestResult
+
+)
+
+router.get(
+
+'/:testRequestId/results',
+
+authenticate,
+
+authorize(['Staff', 'Manager']),
+
+testRequestController.getTestResults
+
+)
+
+// Configure multer for file uploads
+
+const storage = multer.diskStorage({
+
+destination: (req, file, cb) => {
+
+cb(null, 'uploads/signatures/')
+
+},
+
+filename: (req, file, cb) => {
+
+const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9)
+
+cb(null, 'signature-' + uniqueSuffix + path.extname(file.originalname))
+
+}
+
+})
+
+const upload = multer({
+
+storage,
+
+limits: {
+
+fileSize: 5 * 1024 * 1024 // 5MB
+
+},
+
+fileFilter: (req, file, cb) => {
+
+const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
+
+if (allowedTypes.includes(file.mimetype)) {
+
+cb(null, true)
+
+} else {
+
+cb(new Error('Invalid file type. Only JPEG, PNG, and GIF are allowed.'))
+
+}
+
+}
+
+})
+
+// Protected user routes
+
+router.get('/profile', authenticate, userController.getProfile)
+
+router.put('/profile', authenticate, userController.updateProfile)
+
+const app = express()
+
+// Create upload directories if they don't exist
+
+const uploadDirs = ['uploads', 'uploads/signatures', 'uploads/documents']
+
+uploadDirs.forEach((dir) => {
+
+if (!fs.existsSync(dir)) {
+
+fs.mkdirSync(dir, { recursive: true })
+
+}
+
+})
+
+// Security middleware
+
+app.use(helmet())
+
+// Rate limiting
+
+const limiter = rateLimit({
+
+windowMs: 15 * 60 * 1000, // 15 minutes
+
+max: 100, // limit each IP to 100 requests per windowMs
+
+message: {
+
+success: false,
+
+message: 'Too many requests from this IP, please try again later.'
+
+},
+
+standardHeaders: true,
+
+legacyHeaders: false
+
+})
+
+app.use(limiter)
+
+// CORS configuration
+
+app.use(
+
+cors({
+
+origin: config.cors.origin,
+
+credentials: config.cors.credentials,
+
+methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+
+allowedHeaders: ['Content-Type', 'Authorization']
+
+})
+
+)
+
+// Body parsing middleware
+
+app.use(express.json({ limit: '10mb' }))
+
+app.use(express.urlencoded({ extended: true, limit: '10mb' }))
+
+// Serve static files
+
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')))
+
+// Health check endpoint
+
+app.get('/health', (req, res) => {
+
+res.status(200).json({
+
+success: true,
+
+message: 'Server is running',
+
+timestamp: new Date().toISOString(),
+
+environment: process.env.NODE_ENV || 'development'
+
+})
+
+})
+
+if (config.nodeEnv === 'development') {
+
+app.use(morgan('dev'))
+
+}
+
+// API routes
+
+app.use('/api/auth', authRoutes)
+
+app.use('/api/users', userRoutes)
+
+// app.use("/api/services", serviceRoutes)
+
+app.use('/api/admin', adminRoute)
+
+app.use('/api/services', serviceRoutes)
+
+// app.use('/api/payment', paymentRoutes)
+
+app.use('/api/test-requests', testRequestRoutes)
+
+// 404 handler
+
+app.use('*', (req, res) => {
+
+res.status(404).json({
+
+success: false,
+
+message: `Route ${req.originalUrl} not found`,
+
+method: req.method
+
+})
+
+})
+
+// Global error handler (must be last)
+
+app.use(errorMiddleware)
+
+----------------------------------------
+
+return result.recordset[0] ---->kiểu dữ liệu trả ra
+
+--------------------------------
+
+-- Create Roles table
+
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Roles' AND xtype='U')
+
+BEGIN
+
+CREATE TABLE Roles (
+
+RoleID INT IDENTITY(1,1) PRIMARY KEY,
+
+RoleName NVARCHAR(50) NOT NULL UNIQUE,
+
+);
+
+END
+
+GO
+
+-- Create Accounts table
+
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Accounts' AND xtype='U')
+
+BEGIN
+
+CREATE TABLE Accounts (
+
+AccountID INT IDENTITY(1,1) PRIMARY KEY,
+
+Email NVARCHAR(255) NOT NULL UNIQUE,
+
+PasswordHash NVARCHAR(255) NOT NULL,
+
+RoleID INT NOT NULL,
+
+CreatedAt DATETIME DEFAULT GETDATE(),
+
+FOREIGN KEY (RoleID) REFERENCES Roles(RoleID)
+
+);
+
+END
+
+GO
+
+-- Create UserProfiles table
+
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='UserProfiles' AND xtype='U')
+
+BEGIN
+
+CREATE TABLE UserProfiles (
+
+ProfileID INT IDENTITY(1,1) PRIMARY KEY,
+
+AccountID INT NOT NULL,
+
+FullName NVARCHAR(100),
+
+PhoneNumber NVARCHAR(20),
+
+Address NVARCHAR(500),
+
+DateOfBirth DATE,
+
+SignatureImage NVARCHAR(500),
+
+CreatedAt DATETIME DEFAULT GETDATE(),
+
+UpdatedAt DATETIME DEFAULT GETDATE(),
+
+FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID) ON DELETE CASCADE
+
+);
+
+END
+
+-- Create RefreshTokens table
+
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='RefreshTokens' AND xtype='U')
+
+BEGIN
+
+CREATE TABLE RefreshTokens (
+
+TokenID INT IDENTITY(1,1) PRIMARY KEY,
+
+AccountID INT NOT NULL,
+
+Token NVARCHAR(500) NOT NULL UNIQUE,
+
+ExpiresAt DATETIME NOT NULL,
+
+Revoked BIT DEFAULT 0,
+
+CreatedAt DATETIME DEFAULT GETDATE(),
+
+FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID) ON DELETE CASCADE
+
+);
+
+END
+
+GO
+
+-- Create Services table
+
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Services' AND xtype='U')
+
+BEGIN
+
+CREATE TABLE Services (
+
+ServiceID INT IDENTITY(1,1) PRIMARY KEY,
+
+ServiceName NVARCHAR(200) NOT NULL,
+
+ServiceType NVARCHAR(50) NOT NULL CHECK (ServiceType IN ('Administrative', 'Civil')),
+
+Description NVARCHAR(1000) NOT NULL,
+
+Price DECIMAL(10,2) NOT NULL CHECK (Price > 0),
+
+SampleCount INT NOT NULL CHECK (SampleCount IN (2, 3)),
+
+CreatedAt DATETIME DEFAULT GETDATE(),
+
+UpdatedAt DATETIME DEFAULT GETDATE(),
+
+);
+
+END
+
+GO
+
+-- Create TestRequests table
+
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='TestRequests' AND xtype='U')
+
+BEGIN
+
+CREATE TABLE TestRequests (
+
+TestRequestID INT IDENTITY(1,1) PRIMARY KEY,
+
+AccountID INT NOT NULL,
+
+ServiceID INT NOT NULL,
+
+AssignedTo NVARCHAR(20),
+
+Status NVARCHAR(50) DEFAULT 'Input Infor' CHECK (Status IN ('Input Infor' ,'Pending', 'Confirmed' ,'In Progress', 'Completed')),
+
+CollectionMethod NVARCHAR(50) NOT NULL CHECK (CollectionMethod IN ('Home', 'Facility')),
+
+Appointment DATE,
+
+CreatedAt DATETIME DEFAULT GETDATE(),
+
+UpdatedAt DATETIME DEFAULT GETDATE(),
+
+FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID),
+
+FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID),
+
+);
+
+END
+
+GO
+
+CREATE TABLE TestAtHome(
+
+TestHomeID INT IDENTITY(1,1) PRIMARY KEY,
+
+TestRequestID INT,
+
+KitID VARCHAR(4),
+
+Status NVARCHAR(50) DEFAULT 'Sent' CHECK (Status IN ('Sent','Received'))
+
+FOREIGN KEY(TestRequestID ) REFERENCES dbo.TestRequests(TestRequestID)
+
+);
+
+CREATE TABLE TestAtFacility(
+
+TestFacilityID INT IDENTITY(1,1) PRIMARY KEY,
+
+TestRequestID INT,
+
+FOREIGN KEY(TestRequestID ) REFERENCES dbo.TestRequests(TestRequestID)
+
+);
+
+CREATE TABLE SampleCategories(
+
+SampleID INT IDENTITY(1,1) PRIMARY KEY,
+
+SampleType NVARCHAR(100),
+
+Status NVARCHAR(50) DEFAULT 'Pending' CHECK (Status IN ('Pending' ,'Confirmed')),
+
+TestRequestID INT,
+
+TesterName NVARCHAR(30),
+
+CMND NVARCHAR(12),
+
+YOB INT,
+
+Gender NVARCHAR(10) NOT NULL CHECK (Gender IN ('Male', 'Female')),
+
+Relationship NVARCHAR(40),
+
+SignatureImage NVARCHAR(500),
+
+FOREIGN KEY(TestRequestID ) REFERENCES dbo.TestRequests(TestRequestID)
+
+);
+
+CREATE TABLE TestResults(
+
+TestResultID INT IDENTITY(1,1) PRIMARY KEY,
+
+TestRequestID INT UNIQUE,
+
+Result NVARCHAR(20),
+
+EnterBy INT,
+
+EnterDate DATETIME DEFAULT GETDATE(),
+
+ConfirmBy NVARCHAR(20),
+
+ConfirmDate DATETIME DEFAULT GETDATE(),
+
+Status NVARCHAR(50) DEFAULT 'Pending' CHECK (Status IN ('Pending', 'Verified')),
+
+FOREIGN KEY(TestRequestID ) REFERENCES dbo.TestRequests(TestRequestID)
+
+);
+
+GO
+
+CREATE TABLE Blogs(
+
+BlogID INT IDENTITY(1,1) PRIMARY KEY,
+
+AccountID INT,
+
+Tilte NVARCHAR(100),
+
+Description NVARCHAR(1000) NOT NULL,
+
+Image NVARCHAR(500),
+
+CreatedAt DATETIME DEFAULT GETDATE(),
+
+FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID) ON DELETE CASCADE
+
+);
+
+CREATE TABLE Feedbacks(
+
+FeedbackID INT IDENTITY(1,1) PRIMARY KEY,
+
+TestResultID INT,
+
+AccountID INT,
+
+Comment NVARCHAR(50),
+
+Rating INT,
+
+Status NVARCHAR(50) DEFAULT 'Pending' CHECK (Status IN ('Pending', 'Rated')),
+
+CreatedAt DATETIME DEFAULT GETDATE(),
+
+FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID) ,
+
+FOREIGN KEY (TestResultID) REFERENCES TestResults(TestResultID)
+
+);
+
+---------------------------------------
