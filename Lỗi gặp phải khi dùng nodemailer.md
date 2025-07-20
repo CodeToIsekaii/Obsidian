@@ -5,6 +5,171 @@ Related : [[]]
 Tag: #
 ___
 
+Trong đoạn code bạn đưa, bạn đang sử dụng cấu hình đơn giản cho Gmail SMTP thông qua `nodemailer`, nhưng chưa bật rõ `secure: true` để đảm bảo gửi qua **SSL/TLS** — điều rất quan trọng để email không bị đưa vào **mục spam**.
+
+---
+
+## ✅ Cách chỉnh lại cho bảo mật tốt hơn (sử dụng SSL đúng cách)
+
+Thay thế đoạn trong `getTransporter()` bằng:
+
+```ts
+private static getTransporter() {
+  return nodemailer.createTransport({
+    host: 'smtp.gmail.com',        // dùng host thay vì 'service'
+    port: 465,                     // SSL port
+    secure: true,                  // sử dụng SSL
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD
+    }
+  })
+}
+```
+
+### 📌 Giải thích:
+
+|Trường hợp|Lý do nên dùng|
+|---|---|
+|`host: smtp.gmail.com`|Luôn chính xác hơn `service: 'gmail'` nếu bạn cần kiểm soát kỹ SSL|
+|`port: 465`|Port của SSL truyền thống|
+|`secure: true`|Bắt buộc nếu dùng port 465, đảm bảo mã hóa toàn phần|
+
+---
+
+### 🔐 Bổ sung (khuyến khích):
+
+- Đặt thêm `tls: { rejectUnauthorized: false }` nếu test local, nhưng KHÔNG nên để trong production.
+    
+
+---
+
+## ✅ Full updated version của bạn:
+
+```ts
+import nodemailer from 'nodemailer'
+
+export class EmailService {
+  private static readonly DEFAULT_FROM = process.env.EMAIL_USER || 'genunitycompany@gmail.com'
+
+  private static getTransporter() {
+    return nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD
+      }
+    })
+  }
+
+  static async sendEmail(options: EmailOptions): Promise<boolean> {
+    try {
+      const transporter = this.getTransporter()
+
+      const mailOptions = {
+        from: options.from || this.DEFAULT_FROM,
+        to: options.to,
+        subject: options.subject,
+        text: options.text,
+        html: options.html
+      }
+
+      await transporter.sendMail(mailOptions)
+      return true
+    } catch (error) {
+      console.error('Error sending email:', error)
+      return false
+    }
+  }
+}
+```
+
+---
+
+## ✅ Thêm: dùng Gmail cần App Password
+
+Nếu dùng Gmail, bạn **bắt buộc**:
+
+1. Bật 2-step verification (2FA)
+    
+2. Tạo App password (16 ký tự) thay thế cho mật khẩu Gmail thật
+    
+
+Tạo tại:  
+🔗 [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
+
+---
+
+Cần mình kiểm tra giúp cả SPF/DKIM domain hoặc chuyển sang SMTP chuyên nghiệp hơn (ví dụ Mailgun/Resend) thì cứ nhắn nhé!
+### ✅ **Cách 1: Dùng `service: 'gmail'` (dễ dùng, cấu hình nhanh)**
+
+```ts
+nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD
+  }
+})
+```
+
+- **Ưu điểm**:
+    
+    - Dễ dùng, Nodemailer tự cấu hình `host`, `port`, `secure`, `TLS` cho Gmail.
+        
+    - Phù hợp khi chỉ gửi qua Gmail, không cần linh hoạt.
+        
+- **Nhược điểm**:
+    
+    - Ít kiểm soát (khó tùy chỉnh), nếu muốn dùng dịch vụ khác như Outlook, Zoho, Mailgun, v.v., phải đổi hẳn `service`.
+        
+
+---
+
+### ✅ **Cách 2: Cấu hình thủ công bằng `host`, `port`, `secure` (chuyên nghiệp hơn)**
+
+```ts
+nodemailer.createTransport({
+  host: process.env.EMAIL_HOST, // smtp.gmail.com
+  port: Number(process.env.EMAIL_PORT), // 465 hoặc 587
+  secure: process.env.EMAIL_SECURE === 'true', // true nếu dùng cổng 465 (SSL)
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD
+  }
+})
+```
+
+- **Ưu điểm**:
+    
+    - Linh hoạt, có thể thay đổi sang bất kỳ dịch vụ SMTP nào.
+        
+    - Phù hợp với hệ thống lớn cần dễ dàng chuyển đổi SMTP provider (Gmail, Mailgun, Sendgrid, Amazon SES…).
+        
+- **Nhược điểm**:
+    
+    - Cần tự điền đúng host/port/secure, dễ sai nếu không quen.
+        
+
+---
+
+### ❓ Vậy nên dùng cái nào?
+
+|Mục đích|Cách dùng nên chọn|
+|---|---|
+|Gửi mail đơn giản bằng Gmail|`service: 'gmail'`|
+|Gửi mail chuyên nghiệp hoặc không dùng Gmail|`host`/`port`/`secure` kiểu SMTP|
+
+---
+
+### ❗Nếu bạn đã cấu hình thủ công kiểu SMTP (có `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_SECURE`) thì **không cần `EMAIL_SERVICE` nữa** – nên bỏ ra để tránh nhầm lẫn.
+
+---
+
+Nếu bạn cần mình chỉnh lại toàn bộ `getTransporter()` và `.env` đúng cách, mình sẽ viết chuẩn luôn cho bạn.
+-------
 POST /api/auth/forgot-password 200 3321.838 ms - 80Error in resetPassword: JsonWebTokenError: invalid token at Object.module.exports [as verify] (D:\aFPT\SWP\bloodline-dna-monorepo\bloodline-dna-backend\node_modules\jsonwebtoken\verify.js:75:17) at resetPassword (D:\aFPT\SWP\bloodline-dna-monorepo\bloodline-dna-backend\src\services\authService.ts:320:25) at processTicksAndRejections (node:internal/process/task_queues:105:5) at async resetPasswordHandler (D:\aFPT\SWP\bloodline-dna-monorepo\bloodline-dna-backend\src\controllers\authController.ts:271:20)POST /api/auth/reset-password 200
 
 ### 1. **Backend - authService.ts**:
