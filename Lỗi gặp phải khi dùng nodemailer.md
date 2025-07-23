@@ -134,7 +134,7 @@ nodemailer.createTransport({
 nodemailer.createTransport({
   host: process.env.EMAIL_HOST, // smtp.gmail.com
   port: Number(process.env.EMAIL_PORT), // 465 hoặc 587
-  secure: process.env.EMAIL_SECURE === 'true', // true nếu dùng cổng 465 (SSL)
+  secure: process.env.EMAIL_SECURE === 'true', // true nếu dùng cổng 465 (SSL) còn false với 587 (STARTTLS)
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASSWORD
@@ -162,6 +162,66 @@ nodemailer.createTransport({
 |Gửi mail đơn giản bằng Gmail|`service: 'gmail'`|
 |Gửi mail chuyên nghiệp hoặc không dùng Gmail|`host`/`port`/`secure` kiểu SMTP|
 
+---
+Hai cổng `587` và `465` đều được sử dụng để gửi email qua SMTP, nhưng chúng có **sự khác nhau về cách mã hóa kết nối và chuẩn kỹ thuật**, cụ thể như sau:
+
+## ✅ Bảng so sánh: Port 587 vs 465
+
+|Tiêu chí|**Port 587**|**Port 465**|
+|---|---|---|
+|🔐 **Mã hóa**|STARTTLS (mã hóa khởi động sau khi kết nối)|SSL/TLS (mã hóa ngay khi kết nối)|
+|📡 **Chuẩn chính thức (IETF)**|✅ Được khuyến nghị dùng|❌ Không còn được chuẩn hóa (bị loại bỏ khỏi chuẩn ban đầu, nhưng vẫn còn dùng thực tế)|
+|📤 **Dùng cho**|Gửi email từ ứng dụng, email client (Outlook, Thunderbird, Gmail SMTP, v.v.)|Một số hệ thống cũ hoặc mặc định dịch vụ|
+|📦 **Cách kết nối**|Kết nối plain rồi nâng cấp lên TLS bằng lệnh STARTTLS|Kết nối trực tiếp bằng SSL|
+|📌 **Tình trạng hiện nay**|✅ Là cổng SMTP gửi mail hiện đại và phổ biến nhất|⚠️ Còn dùng trong hệ thống cũ hoặc nhà cung cấp chưa chuyển đổi|
+
+---
+
+## 📌 Ví dụ khi dùng với Node.js (Nodemailer)
+
+### Với Port `587` (STARTTLS – hiện đại, phổ biến):
+
+```ts
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // phải là false nếu dùng STARTTLS
+  auth: {
+    user: 'your@email.com',
+    pass: 'yourpassword',
+  },
+});
+```
+
+---
+
+### Với Port `465` (SSL trực tiếp – ít phổ biến hơn):
+
+```ts
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // bắt buộc là true với SSL
+  auth: {
+    user: 'your@email.com',
+    pass: 'yourpassword',
+  },
+});
+```
+
+---
+
+## ✅ Kết luận: Dùng cái nào?
+
+|Tình huống|Nên dùng cổng nào?|
+|---|---|
+|Bạn dùng **ứng dụng hiện đại**, muốn tương thích chuẩn mới nhất|✅ Dùng **587** với `secure: false` và `STARTTLS`|
+|Bạn kết nối tới **SMTP server cũ hoặc dịch vụ yêu cầu SSL từ đầu**|✅ Dùng **465** với `secure: true`|
+|Gửi mail qua **Gmail, SendGrid, Outlook SMTP**|Nên dùng **587** (được khuyến nghị)|
+
+---
+
+Nếu bạn nói rõ hơn bạn đang dùng **nhà cung cấp email nào (Gmail? Zoho? SendGrid?...)**, mình sẽ gợi ý cấu hình phù hợp luôn.
 ---
 
 ### ❗Nếu bạn đã cấu hình thủ công kiểu SMTP (có `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_SECURE`) thì **không cần `EMAIL_SERVICE` nữa** – nên bỏ ra để tránh nhầm lẫn.
