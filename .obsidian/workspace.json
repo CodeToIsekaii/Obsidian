@@ -70,8 +70,7 @@
               "title": "Lỗi gặp phải khi dùng nodemailer"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -254,7 +253,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Lỗi gặp phải khi dùng nodemailer.md",
+                "file": "Requirement SWP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -282,7 +281,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Lỗi gặp phải khi dùng nodemailer"
+              "title": "Graph of Requirement SWP"
             }
           }
         ]
@@ -331,7 +330,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "82c068dd3e928670",
+  "active": "5fd08c20f3f5de9f",
   "lastOpenFiles": [
     "Lỗi gặp phải khi dùng nodemailer.md",
     "Untitled 5.md",

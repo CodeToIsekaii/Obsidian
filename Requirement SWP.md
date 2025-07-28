@@ -483,7 +483,7 @@ cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại 
     - Nút **Choose** (Chọn)
 ---
 ### 2. **Chọn dịch vụ**
-- Khi khách hàng nhấn **Choose** cho một dịch vụ bất kỳ, hệ thống sẽ hiển thị **thông tin chi tiết** của dịch vụ bao gồm:
+- Khi khách hàng nhấn **Đăng ký** cho một dịch vụ bất kỳ, hệ thống sẽ hiển thị **thông tin chi tiết** của dịch vụ bao gồm:
     - Loại dịch vụ (Hành chính hoặc Dân sự)
     - Tên và mô tả dịch vụ
     - Giá tiền
@@ -495,40 +495,40 @@ cus đăng nhập vào web vào trang dịch vụ sẽ thấy được 2 loại 
     - Nếu dịch vụ là **lấy mẫu tại cơ sở**, khách hàng sẽ được **chọn ngày giờ lấy mẫu**.
     - Nếu dịch vụ là **lấy tại nhà**, **không hiển thị phần chọn ngày giờ**.
 ---
-### 3. **Đăng ký dịch vụ*
-- Sau khi xác nhận dịch vụ và chọn ngày giờ (nếu có), khách hàng nhấn nút **Đăng ký**.
+### 3. **Gửi Đăng ký dịch vụ*
+- Sau khi xác nhận dịch vụ và chọn ngày giờ (nếu có), khách hàng nhấn nút **Gửi đăng ký**.
 - Hệ thống chuyển đến bước **thanh toán qua VNPay**.
-- Lưu ý: Khách hàng **chỉ được phép thay đổi lịch hẹn trước 24 giờ** so với lịch đã đặt.
+
 ---
 ## 📌 **Luồng xử lý theo từng loại dịch vụ**
 
 ### 🔸 **Dịch vụ Hành chính** (Chỉ lấy mẫu tại cơ sở)
 1. Sau khi thanh toán thành công, **đơn đăng ký được hệ thống tự động tạo**.
-2. Nhân viên (staff) thấy đơn trên hệ thống, **mở đơn và xác nhận**.
-3. Nhân viên xác nhận lại mẫu mà khách hàng đăng ký và cập nhật trạng thái **Đã nhận mẫu**
-4. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
+2. customer sẽ thấy đơn đang ở trạng thái cần thông tin(input infor) , sau khi điền đầy đủ thông tin và xác nhận 
+3. Nhân viên (staff) sẽ thấy đơn trên hệ thống trạng thái dang chờ(pending), **xem và xác nhận**. trang thái đổi thành đã xác nhận(confirmed)
+4. Nhân viên xác nhận lại mẫu mà khách hàng đăng ký và cập nhật trạng thái  **Đang xét nghiệm(in progress)**.
 5. Staff nhập kết quả xét nghiệm.
-6. Quản lý (manager) xác nhận kết quả.→ đơn chuyển sang trạng thái **Đã có kết quả**.
-7. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
+6. Quản lý (manager thấy những test result đang chờ xác nhận (pending)
+7. Quản lý (manager) xác nhận kết quả.→ đơn chuyển sang trạng thái **Đã có kết quả(verified)**.nếu từ chối thì xóa testresult và testrequest vẫn là in progress
+8. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
 ----
 ### 🔸 **Dịch vụ Dân sự**
 #### 👉 **Lấy mẫu tại nhà*
 1. Sau khi khách hàng thanh toán thành công, **đơn đăng ký được tự động tạo**.
-2. Nhân viên thấy đơn, mở và xác nhận →  **mã kit** trong TestAtHome và  ảnh chữ ký staff (nếu có trong UserProfile, hệ thống tự động chèn).
-3. Nhấn **Gửi** → đơn chuyển sang trạng thái **Đã gửi kit**.
-4. Khách hàng gửi lại kit nhấn **Gửi**.
-5. Nhân viên nhận mẫu, nhấn **Xác nhận** nếu sai thì cập nhật→ đơn chuyển sang trạng thái **Đang xét nghiệm**.
-6. Staff nhập kết quả.
-7. Manager xác nhận kết quả. → trạng thái **Đã có kết quả**.
-8. Khách hàng xem kết quả trên hệ thống và có thể **xuất ra file PDF**.
+2. Nhân viên thấy đơn, xem và xác nhận →  kit sẽ được gửi đến cho customer-> customer gủi lại mẫu kit
+3. Nhân viên nhận mẫu, tick đã lây mẫu→ đơn chuyển sang trạng thái **Đang xét nghiệm**.
+4. Staff nhập kết quả.
+5. Quản lý (manager) xác nhận kết quả.→ đơn chuyển sang trạng thái **Đã có kết quả(verified)**.nếu từ chối thì xóa testresult và testrequest vẫn là in progress
+6. Khách hàng xem kết quả trên hệ thống và có thể **xuất ra file PDF**.
 #### 👉 **Lấy mẫu tại cơ sở**
 1. Sau khi thanh toán thành công, **đơn đăng ký được hệ thống tự động tạo**.
-2. Nhân viên (staff) thấy đơn trên hệ thống, **mở đơn và xác nhận**.
-3. Nhân viên xác nhận lại mẫu mà khách hàng đăng ký và cập nhật trạng thái **Đã nhận mẫu**
-4. Đơn chuyển sang trạng thái **Đang xét nghiệm**.
+2. customer sẽ thấy đơn đang ở trạng thái cần thông tin(input infor) , sau khi điền đầy đủ thông tin và xác nhận 
+3. Nhân viên (staff) sẽ thấy đơn trên hệ thống trạng thái dang chờ(pending), **xem và xác nhận**. trang thái đổi thành đã xác nhận(confirmed)
+4. Nhân viên xác nhận lại mẫu mà khách hàng đăng ký và cập nhật trạng thái  **Đang xét nghiệm(in progress)**.
 5. Staff nhập kết quả xét nghiệm.
-6. Quản lý (manager) xác nhận kết quả.→ đơn chuyển sang trạng thái **Đã có kết quả**.
-7. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
+6. Quản lý (manager thấy những test result đang chờ xác nhận (pending)
+7. Quản lý (manager) xác nhận kết quả.→ đơn chuyển sang trạng thái **Đã có kết quả(verified)**.nếu từ chối thì xóa testresult và testrequest vẫn là in progress
+8. Khách hàng thấy kết quả trên hệ thống và có thể **xuất kết quả ra file PDF**.
    ---
 ## ✅ **1. Validate & Ràng buộc cho Dịch vụ**
 ### 1.1. **Tại giao diện chọn dịch vụ*
