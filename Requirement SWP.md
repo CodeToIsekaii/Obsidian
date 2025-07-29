@@ -1643,3 +1643,254 @@ FOREIGN KEY (TestResultID) REFERENCES TestResults(TestResultID)
 );
 
 ---------------------------------------
+
+
+## ️ **BACKEND STRUCTURE (Node.js + Express + TypeScript)**
+
+### **Cấu trúc thư mục:**
+
+```plaintext
+bloodline-dna-backend/
+├── src/
+│   ├── app.ts                 # Main application setup
+│   ├── index.ts              # Server entry point
+│   ├── config/
+│   │   ├── config.ts         # Environment configuration
+│   │   └── database.ts       # Database connection & setup
+│   ├── controllers/          # Request handlers
+│   │   ├── authController.ts
+│   │   ├── staffController.ts
+│   │   ├── adminController.ts
+│   │   └── ...
+│   ├── services/             # Business logic layer
+│   │   ├── authService.ts
+│   │   ├── staffService.ts
+│   │   └── ...
+│   ├── routes/               # API route definitions
+│   │   ├── authRoutes.ts
+│   │   ├── staffRoutes.ts
+│   │   └── ...
+│   ├── middlewares/          # Custom middleware
+│   │   ├── authMiddleware.ts
+│   │   └── errorMiddleware.ts
+│   ├── constants/            # Application constants
+│   ├── utils/                # Utility functions
+│   └── types/                # TypeScript type definitions
+├── nodemon.json              # Development configuration
+└── package.json
+```
+
+### **Cách hoạt động Backend:**
+
+1. **Entry Point (`index.ts`):**
+
+
+```typescript
+// Khởi tạo server và database
+const startServer = async () => {
+  await initializeApp()  // Connect DB, create admin
+  app.listen(config.port)
+}
+```
+
+2. **Application Setup (`app.ts`):**
+
+
+```typescript
+// Setup middleware, routes, error handling
+app.use(cors(), helmet(), express.json())
+app.use('/api/auth', authRoutes)
+app.use('/api/staff', staffRoutes)
+// Global error handler
+app.use(errorMiddleware)
+```
+
+3. **MVC Pattern:**
+
+4. **Routes** → **Controllers** → **Services** → **Database**
+5. Routes định nghĩa endpoints
+6. Controllers xử lý HTTP requests/responses
+7. Services chứa business logic
+8. Database layer tương tác với SQL Server
+
+
+
+
+
+---
+
+## **FRONTEND STRUCTURE (React + TypeScript + Vite)**
+
+### **Cấu trúc thư mục:**
+
+```plaintext
+bloodline-dna-frontend/
+├── src/
+│   ├── App.tsx               # Main app component & routing
+│   ├── main.tsx             # React entry point
+│   ├── components/          # Reusable UI components
+│   │   ├── Common/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Sidebar.tsx
+│   │   │   └── ...
+│   │   └── Auth/
+│   │       ├── Login.tsx
+│   │       └── Register.tsx
+│   ├── pages/               # Page components
+│   │   ├── Home.tsx
+│   │   ├── staff/
+│   │   │   ├── StaffDashboard.tsx
+│   │   │   ├── ManageRequests.tsx
+│   │   │   └── ...
+│   │   ├── admin/
+│   │   └── customer/
+│   ├── services/            # API service layer
+│   │   ├── authService.ts
+│   │   ├── staffService.ts
+│   │   └── ...
+│   ├── context/             # React Context for state
+│   │   └── AuthContext.tsx
+│   ├── hooks/               # Custom React hooks
+│   │   └── useAuth.ts
+│   ├── utils/               # Utility functions
+│   │   ├── api.ts           # Axios configuration
+│   │   └── types.ts         # TypeScript types
+│   └── index.css            # Global styles (Tailwind)
+├── index.html
+├── vite.config.ts           # Vite configuration
+└── package.json
+```
+
+### **Cách hoạt động Frontend:**
+
+1. **Entry Point (`main.tsx`):**
+
+
+```typescript
+// Render React app
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <App />
+)
+```
+
+2. **App Component (`App.tsx`):**
+
+
+```typescript
+// Setup routing, authentication, global providers
+<Router>
+  <AuthProvider>
+    <Routes>
+      <Route path="/staff/dashboard" element={<StaffDashboard />} />
+      // Protected routes with role-based access
+    </Routes>
+  </AuthProvider>
+</Router>
+```
+
+3. **Architecture Pattern:**
+
+4. **Components** → **Services** → **API** → **Backend**
+5. Components render UI và handle user interactions
+6. Services gọi API endpoints
+7. API client (axios) gửi HTTP requests
+8. Context API quản lý global state
+
+
+
+
+
+---
+
+## **CÁCH FRONTEND VÀ BACKEND TƯƠNG TÁC**
+
+### **1. Authentication Flow:**
+
+```typescript
+// Frontend: AuthContext.tsx
+const login = async (data: LoginRequest) => {
+  const response = await authService.login(data)  // Call API
+  setUser(response.user)
+  navigate('/dashboard')
+}
+
+// Backend: authController.ts
+export const login = async (req, res) => {
+  const user = await authService.validateUser(email, password)
+  const tokens = generateTokens(user)
+  res.json({ user, ...tokens })
+}
+```
+
+### **2. Data Flow Example (Staff Dashboard):**
+
+**Frontend:**
+
+```typescript
+// StaffDashboard.tsx
+useEffect(() => {
+  const fetchData = async () => {
+    const data = await staffService.getDashboardStats()  // API call
+    setStats(data.stats)
+  }
+}, [])
+```
+
+**API Service:**
+
+```typescript
+// staffService.ts
+async getDashboardStats() {
+  const response = await apiClient.get('/staff/dashboard/stats')
+  return response.data.data
+}
+```
+
+**Backend:**
+
+```typescript
+// staffController.ts
+getDashboardStats = async (req, res) => {
+  const stats = await staffService.getDashboardStats(staffId)
+  res.json({ data: { stats, recentRequests } })
+}
+```
+
+### **3. API Client Configuration:**
+
+```typescript
+// utils/api.ts
+export const apiClient = axios.create({
+  baseURL: 'http://localhost:5000/api',
+  headers: { 'Content-Type': 'application/json' }
+})
+
+// Auto-attach JWT token
+apiClient.interceptors.request.use((config) => {
+  const token = localStorage.getItem('accessToken')
+  if (token) config.headers.Authorization = `Bearer ${token}`
+  return config
+})
+```
+
+---
+
+## ️ **SECURITY & AUTHENTICATION**
+
+1. **JWT Token-based Authentication**
+2. **Role-based Access Control (RBAC)**
+3. **Protected Routes** với middleware
+4. **Token Refresh** mechanism
+5. **CORS** configuration
+
+
+## **DATABASE INTEGRATION**
+
+- **SQL Server** với **mssql** package
+- **Connection pooling** cho performance
+- **Prepared statements** để tránh SQL injection
+- **Transaction support** cho data consistency
+
+
+Cấu trúc này tuân theo **best practices** của modern web development với **separation of concerns**, **scalability**, và **maintainability**.
