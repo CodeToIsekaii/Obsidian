@@ -132,7 +132,7 @@ import type { LoginRequest, RegisterRequest, ChangePasswordRequest, User, Regist
 ```typescript
 interface AuthContextType {
   user: User | null
-  loading:emb boolean
+  loading: boolean
   login: (data: LoginRequest) => Promise<void>
   register: (data: RegisterRequest) => Promise<RegisterResponse>
   logout: () => Promise<void>
@@ -163,6 +163,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 ```
 - **Dòng này**: Tạo component `AuthProvider` để bọc các thành phần con (`children`) và cung cấp Context.
 - **Dễ hiểu**: Tưởng tượng `AuthProvider` là một người quản lý, phân phát thông tin xác thực cho các thành phần con (như các trang trong ứng dụng).
+#### 📌 Nó có ý nghĩa như sau:
+
+- **`AuthProvider`** là một **React Component**.
+- Nó nhận props có tên là **`children`** — tức là **các component con** nằm bên trong khi bạn dùng `<AuthProvider>...</AuthProvider>`.
+- Mục tiêu của nó là **cung cấp thông tin xác thực (auth)** cho toàn bộ ứng dụng, thông qua **React Context API**.
+#### 🎯 Vậy `children` là gì?
+- `children` là **những thứ nằm trong cặp thẻ `AuthProvider`** khi bạn dùng nó trong app.
+##### Ví dụ:
+``<AuthProvider>   <App />  ← đây chính là `children` </AuthProvider>``
+#### 📦 Vai trò của `AuthProvider`
+- Giống như **một người quản lý đăng nhập** cho cả ứng dụng.
+- Bất kỳ component nào bên trong nó đều có thể **truy cập thông tin người dùng**, **token**, hoặc gọi `login()` mà không cần truyền thủ công từng cấp.
+#### 🧠 Hình dung đơn giản:
+##### 🏢 Một văn phòng:
+- `AuthProvider` là **người quản lý văn phòng** (cung cấp thẻ nhân viên, kiểm tra danh tính,...).
+- `children` là **những nhân viên** làm việc trong văn phòng đó (component con).
+- Nhờ có `AuthProvider`, mọi nhân viên **đều biết ai là người đăng nhập, có quyền gì, và có thể logout/login bất cứ lúc nào**.
 
 ```typescript
 const [user, setUser] = useState<User | null>(null)
