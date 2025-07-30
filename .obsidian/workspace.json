@@ -95,7 +95,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -278,7 +278,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Authentication node js react.md",
+                "file": "React hook là gì.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -306,7 +306,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Authentication node js react"
+              "title": "Graph of React hook là gì"
             }
           }
         ]
@@ -355,14 +355,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "6ecbcab9df31176d",
+  "active": "8cf72d297987f07e",
   "lastOpenFiles": [
+    "Authentication node js react.md",
     "React hook là gì.md",
     "Untitled 3.md",
     "Untitled 2.md",
     "Untitled 1.md",
     "Redux, Redux Thunk, và Redux Toolkit.md",
-    "Authentication node js react.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/02-TwitterProjectSchema.md",
