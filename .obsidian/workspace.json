@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Authentication node js react.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Authentication node js react.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React hook là gì.md",
+                "file": "Untitled 5.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -91,7 +91,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "React hook là gì"
+              "title": "Untitled 5"
             }
           },
           {
@@ -100,7 +100,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
+                "file": "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -110,7 +110,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -293,7 +293,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
+                "file": "Untitled 5.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -321,7 +321,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học"
+              "title": "Graph of Untitled 5"
             }
           }
         ]
@@ -370,28 +370,29 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0899642e78d0fb74",
+  "active": "8cf72d297987f07e",
   "lastOpenFiles": [
-    "Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
-    "Authentication node js react.md",
-    "React hook là gì.md",
-    "Untitled 3.md",
+    "Untitled 4.md",
     "Untitled 2.md",
+    "Untitled 3.md",
+    "Untitled.md",
     "Untitled 1.md",
-    "Redux, Redux Thunk, và Redux Toolkit.md",
+    "Requirement SWP.md",
+    "khởi tạo môi trường react.md",
+    "My Brain/1. ARCHIEVED/Full Stack/React/React hook là gì.md",
+    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích",
+    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
+    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Authentication node js react.md",
+    "My Brain/1. ARCHIEVED/Full Stack/React/Redux, Redux Thunk, và Redux Toolkit.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/02-TwitterProjectSchema.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/01-nodejs là gì.md",
-    "Requirement SWP.md",
     "Untitled 5.md",
-    "Lỗi gặp phải khi dùng nodemailer.md",
+    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Lỗi gặp phải khi dùng nodemailer.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/02-serverNodejs.md",
-    "Untitled 4.md",
     "My Brain/1. ARCHIEVED/Full Stack/Git/03-GitNangCao.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/10-accessTokenMiddleware-logout.md",
-    "Untitled.md",
-    "khởi tạo môi trường react.md",
     "My Brain/1. ARCHIEVED/English/Nối âm.md",
     "My Brain/1. ARCHIEVED/English/Listening Skill.md",
     "My Brain/1. ARCHIEVED/English/Cách nói lưu loát.md",
@@ -405,7 +406,6 @@
     "attachments",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Khi nào cần bất đồng bộ.md",
     "My Brain/1. ARCHIEVED/Full Stack/React",
-    "Topic.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-433.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-431.png",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/attachments/image-432.png",
@@ -417,7 +417,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/Database (SQL & NoSQL)/MongoDB",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/attachments",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS",
-    "My Brain/1. ARCHIEVED/Full Stack/Git/attachments",
     "My Brain/Map Early retirement strategy.canvas",
     "Projects mapping.canvas"
   ]
