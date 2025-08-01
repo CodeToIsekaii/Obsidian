@@ -95,7 +95,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -278,7 +278,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "React hook là gì.md",
+                "file": "Authentication node js react.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -306,7 +306,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of React hook là gì"
+              "title": "Graph of Authentication node js react"
             }
           }
         ]
@@ -355,10 +355,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "8cf72d297987f07e",
+  "active": "6ecbcab9df31176d",
   "lastOpenFiles": [
-    "Authentication node js react.md",
     "React hook là gì.md",
+    "Authentication node js react.md",
     "Untitled 3.md",
     "Untitled 2.md",
     "Untitled 1.md",
