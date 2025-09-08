@@ -1,8 +1,8 @@
 ---
 date: ""
 ---
-Related : [[]]
-Tag: #
+Related : [[React]]
+Tag: #reacthook
 ___
 Tôi sẽ giải thích **React Hooks** một cách chi tiết, dễ hiểu bằng tiếng Việt, dành cho người mới học code. Tôi sẽ giải thích từng hook phổ biến, cách chúng hoạt động, và tại sao chúng quan trọng trong React, với ngôn ngữ đơn giản và ví dụ thực tế. Các thuật ngữ chuyên ngành sẽ được giải thích rõ ràng để bạn không bị bối rối.
 
