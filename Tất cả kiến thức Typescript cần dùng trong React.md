@@ -119,4 +119,77 @@ products = "VietNam"; // ❌ lỗi ở đây
 
 👉 Tóm lại: lỗi này là do bạn khai báo `products` là **array**, nhưng lại gán cho nó một **string**.
 
-Bạn muốn mình viết lại theo kiểu **chỉ dùng array** hay **dùng union (array hoặc string)** cho tiện?
+### Function
+### 🔹 Cách 1: Khai báo function và type ngay trong phần định nghĩa
+
+```ts
+const sum = (num1: number, num2: number): number => {
+  return num1 + num2;
+};
+```
+
+Ở đây:
+
+- `num1: number, num2: number`: kiểu tham số.
+    
+- `: number` sau dấu `)` → kiểu trả về.
+    
+- Tất cả đều được viết ngay trong function.
+    
+
+👉 Ưu điểm: ngắn gọn, dễ đọc.  
+👉 Nhược điểm: không tái sử dụng được "chữ ký" (kiểu function).
+
+---
+
+### 🔹 Cách 2: Khai báo kiểu function trước (function type), rồi gán function vào biến
+
+```ts
+const sub: (num1: number, num2: number) => number = (
+  num1: number,
+  num2: number
+) => num1 - num2;
+```
+
+Ở đây tách ra thành 2 phần:
+
+1. **Khai báo kiểu của biến `sub`**:
+    
+    ```ts
+    (num1: number, num2: number) => number
+    ```
+    
+    nghĩa là "một function nhận vào 2 số, trả về 1 số".
+    
+2. **Gán function thực tế cho `sub`**:
+    
+    ```ts
+    (num1, num2) => num1 - num2
+    ```
+    
+
+👉 Ưu điểm:
+
+- Khi có nhiều function cùng "chữ ký", bạn chỉ cần khai báo **1 type** rồi dùng lại.  
+    Ví dụ:
+    
+    ```ts
+    type MathOperation = (a: number, b: number) => number;
+    
+    const add: MathOperation = (a, b) => a + b;
+    const subtract: MathOperation = (a, b) => a - b;
+    const multiply: MathOperation = (a, b) => a * b;
+    ```
+    
+    → Tất cả các function `add`, `subtract`, `multiply` đều cùng kiểu `MathOperation`.
+    
+
+👉 Nhược điểm: viết dài hơn một chút nếu chỉ dùng 1 lần.
+
+---
+
+✅ Tóm gọn:
+
+- **Cách 1**: Viết gọn, dùng trực tiếp.
+- **Cách 2**: Tách riêng phần **type function** → dễ tái sử dụng, code chuẩn hơn khi có nhiều hàm tương tự.
+    
