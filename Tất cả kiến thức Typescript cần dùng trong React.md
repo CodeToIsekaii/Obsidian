@@ -192,7 +192,131 @@ const sub: (num1: number, num2: number) => number = (
 
 - **Cách 1**: Viết gọn, dùng trực tiếp.
 - **Cách 2**: Tách riêng phần **type function** → dễ tái sử dụng, code chuẩn hơn khi có nhiều hàm tương tự.
-Ok 👌 mình giải thích chi tiết từng phần trong code của bạn nha:
+
+
+---
+### **Class**
+## 🔹 1. Class `Person1`
+
+```ts
+class Person1 {
+  private name: string;     // chỉ dùng bên trong class
+  age: number;              // mặc định là public
+  readonly money: number = 40; // chỉ đọc, gán giá trị lúc tạo
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  handle() {
+    let value = this.money; // đọc được
+  }
+}
+
+const alex = new Person1("Alex", 27);
+
+alex.money = 200; // ❌ lỗi: money là readonly
+```
+
+### Giải thích:
+
+- `private name`: chỉ truy cập được trong class, bên ngoài không gọi `alex.name` được.
+    
+- `age`: mặc định là `public`, có thể truy cập từ ngoài class.
+    
+- `readonly money`: chỉ đọc, không thể gán lại sau khi khởi tạo.
+    
+
+👉 Vì vậy dòng `alex.money = 200;` sẽ báo lỗi.
+
+---
+
+## 🔹 2. Class `Person` (cách viết 1)
+
+```ts
+class Person {
+  public name: string;
+  public age: number;
+
+  constructor(name: string, age: number) {
+    this.age = age;
+    this.name = name;
+  }
+}
+```
+
+### Giải thích:
+
+- `public`: có thể truy cập ở mọi nơi (thật ra mặc định `public` là không cần viết cũng được).
+    
+- Trong constructor, bạn phải gán `this.name` và `this.age` thủ công.
+    
+
+---
+
+## 🔹 3. Class `Person` (cách viết rút gọn)
+
+```ts
+class Person {
+  constructor(public name: string, public age: number) {}
+}
+```
+
+### Giải thích:
+
+- Đây là **shorthand của TypeScript**.
+    
+- Khi bạn khai báo `constructor(public name: string, public age: number)`, TS sẽ:
+    
+    1. Tự tạo thuộc tính `name` và `age` trong class.
+        
+    2. Tự gán giá trị khi new object.
+        
+
+👉 Nghĩa là 2 class `Person` này **hoàn toàn giống nhau**, chỉ khác cách viết.
+
+## 🔹 So sánh nhanh
+- `private`: chỉ dùng được **trong chính class đó**, class con cũng không truy cập được.
+- `protected`: dùng được trong **class đó và các class con**, nhưng không thể gọi từ bên ngoài.
+## 🔹 Ví dụ minh họa
+
+```ts
+class Animal {
+  private privateName = "Private";     // chỉ dùng trong Animal
+  protected protectedName = "Protected"; // dùng được trong Animal + class con
+
+  public sayHello() {
+    console.log("Hello, I am an Animal");
+    console.log(this.privateName);   // ✅ OK
+    console.log(this.protectedName); // ✅ OK
+  }
+}
+
+class Dog extends Animal {
+  public showNames() {
+    // console.log(this.privateName);  // ❌ Lỗi: private chỉ có Animal dùng được
+    console.log(this.protectedName);   // ✅ OK: protected dùng trong class con
+  }
+}
+
+const d = new Dog();
+
+d.sayHello();   // OK
+d.showNames();  // OK
+
+// ❌ Lỗi: gọi trực tiếp từ ngoài class thì không được
+// console.log(d.protectedName);
+// console.log(d.privateName);
+```
+
+## ✅ Tóm gọn
+
+- **`private`** → kín nhất, chỉ trong chính class đó.
+- **`protected`** → cho phép **class con** kế thừa sử dụng, nhưng bên ngoài không truy cập được.
+- **`public`** → ai cũng dùng được (mặc định).
+- `readonly`: chỉ đọc, không gán lại sau khi khởi tạo.
+- `constructor(public name: string, ...)` → cách viết **ngắn gọn** để vừa khai báo vừa gán.
 
 ---
 
