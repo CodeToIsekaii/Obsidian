@@ -4,7 +4,7 @@ date: 2025-09-08T13:18:00
 Related : [[React]]
 Tag: #react
 ___
-### Object
+### **Object**
 
 Trong hình bạn khai báo:
 
@@ -61,7 +61,7 @@ house.address = "Da Nang";
 
 👉 Tóm lại: lỗi này là do bạn **chỉ khai báo kiểu mà chưa gán giá trị ban đầu cho biến `house`**.
 
-### Array
+### **Array**
 Trong code bạn có:
 
 ```ts
@@ -119,7 +119,7 @@ products = "VietNam"; // ❌ lỗi ở đây
 
 👉 Tóm lại: lỗi này là do bạn khai báo `products` là **array**, nhưng lại gán cho nó một **string**.
 
-### Function
+### **Function**
 ### 🔹 Cách 1: Khai báo function và type ngay trong phần định nghĩa
 
 ```ts
@@ -192,4 +192,168 @@ const sub: (num1: number, num2: number) => number = (
 
 - **Cách 1**: Viết gọn, dùng trực tiếp.
 - **Cách 2**: Tách riêng phần **type function** → dễ tái sử dụng, code chuẩn hơn khi có nhiều hàm tương tự.
+Ok 👌 mình giải thích chi tiết từng phần trong code của bạn nha:
+
+---
+
+## 🔹 1. Union (`|`)
+
+```ts
+let price: string | number | boolean;
+price = "10";
+price = 20;
+price = false;
+```
+
+- `string | number | boolean` nghĩa là `price` có thể nhận **nhiều kiểu khác nhau**.
     
+- Union rất hữu ích khi dữ liệu có thể thay đổi nhiều dạng (ví dụ: từ API).
+    
+
+Ví dụ phức tạp hơn:
+
+```ts
+let body: { name: string | number } | { firstName: string } = {
+  name: 100,
+};
+```
+
+- Ở đây `body` có thể là:
+    
+    - `{ name: string | number }`, hoặc
+        
+    - `{ firstName: string }`.
+        
+
+---
+
+## 🔹 2. Enum
+
+```ts
+enum Sizes {
+  S = "S",
+  M = "M",
+  L = "L",
+  XL = "XL",
+}
+
+let size = Sizes.S;
+```
+
+- `enum` tạo ra một tập hằng số có tên → giúp code **dễ đọc hơn** thay vì dùng string tự do.
+    nếu không để giá trị thì nó tự động thêm số bắt đầu từ ko từ trên xuống
+- `size` chỉ có thể nhận `"S" | "M" | "L" | "XL"`.
+    
+
+Ví dụ:
+
+```ts
+function getDiscount(size: Sizes) {
+  if (size === Sizes.L) return 10;
+  return 0;
+}
+```
+
+---
+
+## 🔹 3. Interface
+
+```ts
+// interface State {
+//   name: string
+//   isLoading: boolean
+// }
+
+// interface State {
+//   age: number
+// }
+
+// let state: State = {
+//   name: 'Dang',
+//   isLoading: false,
+//   age: 100
+// }
+```
+
+- Điểm hay của `interface`: **có thể khai báo nhiều lần và tự động gộp lại** (declaration merging).
+    
+- Trong ví dụ trên, `State` sẽ có:
+    
+    ```ts
+    { name: string; isLoading: boolean; age: number }
+    ```
+    
+
+---
+
+⚠️ Nhưng `interface` **không dùng được Union trực tiếp**:
+
+```ts
+// ❌ Sai
+// interface Person = Name | Age
+```
+
+---
+
+## 🔹 4. Type
+
+```ts
+// type State = {
+//   name: string
+//   isLoading: boolean
+// }
+```
+
+- `type` thì **không gộp được** như `interface`, nhưng có thể dùng **Union** hoặc **Intersection** rất linh hoạt.
+    
+
+Ví dụ:
+
+```ts
+type Name = { name: string };
+type Age = { age: number };
+
+type Person = Name | Age;   // ✅ được
+type PersonFull = Name & Age; // ✅ được
+```
+
+👉 Đây là lý do bạn thấy:
+
+- `interface` hợp để **mô tả object/struct**,
+    
+- `type` hợp để **xây dựng kiểu linh hoạt, union, intersection**.
+    
+
+---
+
+## 🔹 5. Generic function
+
+```ts
+const handleClick = <Type>(value: Type) => value;
+
+let value = 100;
+handleClick<string>("100");
+```
+
+- `<Type>` là **generic type parameter** (tham số kiểu).
+    
+- Nó cho phép bạn viết hàm mà **chưa cần biết trước kiểu dữ liệu**.
+    
+- Khi gọi:
+    
+    - `handleClick<string>("100")` → ép `Type` thành `string`.
+        
+    - `handleClick(100)` → TS tự suy luận `Type = number`.
+        
+
+👉 Giúp hàm **linh hoạt** nhưng vẫn **an toàn kiểu**.
+
+---
+
+## ✅ Tóm tắt
+
+- **Union (`|`)** → biến có thể nhận nhiều loại giá trị.
+- **Enum** → tập hằng số có tên, dễ đọc, tránh “magic string”.
+- **Interface** → mô tả object, có thể mở rộng/gộp.
+- **Type** → mô tả kiểu, mạnh khi cần union/intersection.
+- **Generic** → viết hàm/class có thể dùng cho nhiều kiểu khác nhau.
