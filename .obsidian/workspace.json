@@ -23,18 +23,6 @@
             }
           },
           {
-            "id": "4ad16e8ed561146d",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.14"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.14"
-            }
-          },
-          {
             "id": "82c068dd3e928670",
             "type": "leaf",
             "state": {
@@ -48,9 +36,33 @@
               "icon": "lucide-file",
               "title": "Untitled"
             }
+          },
+          {
+            "id": "e5c4d6151d6172ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "map, filter, reduce.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "map, filter, reduce"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#map",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,7 +125,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -233,6 +246,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "map, filter, reduce.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -260,7 +274,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Graph of map, filter, reduce"
             }
           }
         ]
@@ -310,18 +324,22 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "4ad16e8ed561146d",
+  "active": "0f73733ebf6ce86d",
   "lastOpenFiles": [
+    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Authentication node js react.md",
+    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Lỗi gặp phải khi dùng nodemailer.md",
+    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
+    "Untitled.md",
+    "map, filter, reduce.md",
+    "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/03-async-await.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/02-promise.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/01-asynchronous-callback.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
-    "Untitled.md",
     "Tất cả kiến thức Typescript cần dùng trong React.md",
     "Untitled 1.md",
     "Untitled 2.md",
     "Untitled 5.md",
     "My Brain/1. ARCHIEVED/Full Stack/React/React hook là gì.md",
-    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Authentication node js react.md",
     "My Brain/2. RESOURCE/index/FullStack.md",
     "My Brain/2. RESOURCE/index/React.md",
     "My Brain/2. RESOURCE/index/JavaScript.md",
@@ -331,14 +349,10 @@
     "My Brain/2. RESOURCE/index/NodeJS.md",
     "My Brain/2. RESOURCE/index/DEV.md",
     "My Brain/SECOND BRAIN.md",
-    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
     "Untitled 4.md",
     "Requirement SWP.md",
     "khởi tạo môi trường react.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích",
-    "My Brain/1. ARCHIEVED/Full Stack/React/Redux, Redux Thunk, và Redux Toolkit.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/02-TwitterProjectSchema.md",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",
     "attachments/Pasted image 20250518220050.png",
