@@ -84,9 +84,21 @@
               "icon": "lucide-file",
               "title": "Untitled 3"
             }
+          },
+          {
+            "id": "be70c26b3df4ab4c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.6"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -269,7 +281,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Untitled 3.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -297,7 +308,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Untitled 3"
+              "title": "Graph view"
             }
           }
         ]
@@ -347,7 +358,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5d7a08024059fad6",
+  "active": "be70c26b3df4ab4c",
   "lastOpenFiles": [
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part04-oop/06-class-ClassInheritance.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part06-json-ajax-fetch/01-json-ajax-fetch.md",
