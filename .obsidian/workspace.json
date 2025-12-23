@@ -89,12 +89,24 @@
             "id": "be70c26b3df4ab4c",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.10.6"
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.6"
+              "icon": "lucide-file",
+              "title": "01-twitterProjectIns"
             }
           }
         ],
@@ -281,6 +293,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -308,7 +321,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Graph of 01-twitterProjectIns"
             }
           }
         ]
@@ -360,6 +373,7 @@
   },
   "active": "be70c26b3df4ab4c",
   "lastOpenFiles": [
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part04-oop/06-class-ClassInheritance.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part06-json-ajax-fetch/01-json-ajax-fetch.md",
     "My Brain/2. RESOURCE/index/JavaScript.md",
@@ -382,7 +396,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/03-async-await.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/02-promise.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/01-asynchronous-callback.md",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "Untitled 1.md",
     "Untitled 2.md",
     "Untitled 5.md",
