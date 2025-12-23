@@ -108,9 +108,33 @@
               "icon": "lucide-file",
               "title": "01-twitterProjectIns"
             }
+          },
+          {
+            "id": "a13e2c3cb70b1bc3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vibe code.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Vibe code"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -293,7 +317,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
+                "file": "Vibe code.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -321,7 +345,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 01-twitterProjectIns"
+              "title": "Graph of Vibe code"
             }
           }
         ]
@@ -371,8 +395,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "be70c26b3df4ab4c",
+  "active": "a13e2c3cb70b1bc3",
   "lastOpenFiles": [
+    "Vibe code.md",
+    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part04-oop/06-class-ClassInheritance.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part06-json-ajax-fetch/01-json-ajax-fetch.md",
@@ -399,8 +425,6 @@
     "Untitled 1.md",
     "Untitled 2.md",
     "Untitled 5.md",
-    "My Brain/1. ARCHIEVED/Full Stack/React/React hook là gì.md",
-    "My Brain/2. RESOURCE/index/React.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",
