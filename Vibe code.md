@@ -8,5 +8,6 @@ ___
 -sau đó mình sẽ đua qua gemini pro thao luận về topic đó cãi lộn để chôt được luốn chứ sau này code rồi cứ sửa luồng do gemini quên thì lỏ
 -tiếp đó là cãi lộn và phải chốt được công nghệ, database, kiến trúc và cấu trúc folder ,clean code, nhớ thêm solid và có oop nếu cần, xử lý asynhandller, errormiddleware
 chốt được rồi  thì biến nó thành rule 
-sau này cứ sửa luổng thì lại phải sửa rule má thiệt
+sau này cứ sửa luổng thì lại phải sửa rule má thiệt 
+nêu bắt buộc phải cập nhật rule thì "làm ơn cập nhật giúp tôi rule này đi gemini pro nhớ bắt buộc là cái gì khác mới cập nhật còn đang đúng thì giữ nguyên viết lại đừng rút gọn, nhớ đấy"
 
