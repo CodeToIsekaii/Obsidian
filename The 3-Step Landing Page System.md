@@ -1,11 +1,10 @@
 ---
-date: ""
+date: 2025-12-26T00:07:00
 ---
 Related : [[]]
 Tag: #
 ___
 
-## The 3-Step Landing Page System
 
 **Phase 1: Deep Research & Strategy**  
 Use Prompts #1 and #2 to research best practices and generate your initial landing page structure
@@ -62,15 +61,10 @@ Create a comprehensive guide for building a high-converting landing page for [PR
 **IMPORTANT GUIDELINES:**
 
 - Focus on conversion psychology that drives qualified B2B leads
-
 - Provide specific examples and templates, not just general advice
-
 - Include tactical guidance that can be implemented immediately
-
 - Cite specific best practices from conversion experts like Joanna Wiebe, Oli Gardner, and Peep Laja
-
 - Make recommendations specific to our industry and target audience
-
 - Incorporate the latest best practices from 2025, not outdated tactics
 
 Please create a comprehensive, detailed guide that covers all these elements and serves as a complete reference for building a high-converting landing page. Include specific examples and templates where relevant.

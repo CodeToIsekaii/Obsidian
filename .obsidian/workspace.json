@@ -139,7 +139,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 4.md",
+                "file": "The 3-Step Landing Page System.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -154,7 +154,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 4"
+              "title": "The 3-Step Landing Page System"
             }
           }
         ],
@@ -341,7 +341,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Untitled 4.md",
+                "file": "The 3-Step Landing Page System.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -369,7 +369,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Untitled 4"
+              "title": "Graph of The 3-Step Landing Page System"
             }
           }
         ]
@@ -421,7 +421,7 @@
   },
   "active": "d9574de08dcd7e39",
   "lastOpenFiles": [
-    "Untitled 4.md",
+    "The 3-Step Landing Page System.md",
     "Vibe code.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
