@@ -115,7 +115,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vibe code.md",
+                "file": "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -341,7 +341,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Vibe code.md",
+                "file": "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -419,17 +419,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a13e2c3cb70b1bc3",
+  "active": "91ea0f5f7cc6bb54",
   "lastOpenFiles": [
-    "The 3-Step Landing Page System.md",
-    "Vibe code.md",
+    "My Brain/1. ARCHIEVED/Vibe Money",
+    "My Brain/2. RESOURCE/index/Vibe AI.md",
+    "My Brain/2. RESOURCE/index/AICreative.md",
+    "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
+    "My Brain/1. ARCHIEVED/Vibe Money/The 3-Step Landing Page System.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part04-oop/06-class-ClassInheritance.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part06-json-ajax-fetch/01-json-ajax-fetch.md",
     "My Brain/2. RESOURCE/index/JavaScript.md",
     "My Brain/2. RESOURCE/index/NodeJS.md",
-    "My Brain/2. RESOURCE/index/AICreative.md",
     "My Brain/2. RESOURCE/index/FullStack.md",
     "My Brain/2. RESOURCE/index/Make Money.md",
     "My Brain/1. ARCHIEVED/Full Stack/React/Tất cả kiến thức Typescript cần dùng trong React.md",
@@ -447,8 +449,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/03-async-await.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/02-promise.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/01-asynchronous-callback.md",
-    "Untitled 1.md",
-    "Untitled 2.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",

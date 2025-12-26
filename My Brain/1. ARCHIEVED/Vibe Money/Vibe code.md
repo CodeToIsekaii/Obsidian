@@ -1,8 +1,8 @@
 ---
 date: 2025-12-24T00:36:00
 ---
-Related : [[]]
-Tag: #
+Related : [[Vibe AI]]
+Tag: #Ai #Vibe 
 ___
 đầu tiên là phải có ý tưởng quăng lên grok cho nó mở rộng ra 
 -sau đó mình sẽ đua qua gemini pro thao luận về topic đó cãi lộn để chôt được luốn chứ sau này code rồi cứ sửa luồng do gemini quên thì lỏ
