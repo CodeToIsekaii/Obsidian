@@ -156,9 +156,33 @@
               "icon": "lucide-file",
               "title": "The 3-Step Landing Page System"
             }
+          },
+          {
+            "id": "1b781ce6a0328074",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SnapKO app.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "SnapKO app"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -341,7 +365,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
+                "file": "SnapKO app.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -369,7 +393,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Vibe code"
+              "title": "Graph of SnapKO app"
             }
           }
         ]
@@ -419,12 +443,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "91ea0f5f7cc6bb54",
+  "active": "1b781ce6a0328074",
   "lastOpenFiles": [
+    "SnapKO app.md",
+    "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
     "My Brain/1. ARCHIEVED/Vibe Money",
     "My Brain/2. RESOURCE/index/Vibe AI.md",
     "My Brain/2. RESOURCE/index/AICreative.md",
-    "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
     "My Brain/1. ARCHIEVED/Vibe Money/The 3-Step Landing Page System.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/01-twitterProjectIns.md",
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject/03-MVC-RestFul-JWT-Token.md",
@@ -466,7 +491,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/NodeJS/TweetProject",
     "My Brain/1. ARCHIEVED/Full Stack/Database (SQL & NoSQL)/MongoDB/attachments",
     "My Brain/1. ARCHIEVED/Full Stack/Database (SQL & NoSQL)/MongoDB",
-    "My Brain/1. ARCHIEVED/Full Stack/NodeJS/attachments",
     "My Brain/Map Early retirement strategy.canvas",
     "Projects mapping.canvas"
   ]
