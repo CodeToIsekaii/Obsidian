@@ -182,7 +182,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -365,7 +365,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "SnapKO app.md",
+                "file": "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -393,7 +393,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of SnapKO app"
+              "title": "Graph of Vibe code"
             }
           }
         ]
@@ -443,7 +443,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "1b781ce6a0328074",
+  "active": "a13e2c3cb70b1bc3",
   "lastOpenFiles": [
     "SnapKO app.md",
     "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
