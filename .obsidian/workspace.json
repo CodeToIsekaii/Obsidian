@@ -180,9 +180,33 @@
               "icon": "lucide-file",
               "title": "SnapKO app"
             }
+          },
+          {
+            "id": "36a74d4884214565",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Startup Idea.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Startup Idea"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -249,7 +273,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 200
   },
   "right": {
     "id": "b4716a1b82e52f01",
@@ -365,7 +389,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
+                "file": "Startup Idea.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -393,7 +417,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Vibe code"
+              "title": "Graph of Startup Idea"
             }
           }
         ]
@@ -426,7 +450,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 256.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -443,10 +467,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a13e2c3cb70b1bc3",
+  "active": "36a74d4884214565",
   "lastOpenFiles": [
-    "SnapKO app.md",
+    "Startup Idea.md",
     "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
+    "SnapKO app.md",
     "My Brain/1. ARCHIEVED/Vibe Money",
     "My Brain/2. RESOURCE/index/Vibe AI.md",
     "My Brain/2. RESOURCE/index/AICreative.md",
@@ -473,7 +498,6 @@
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/03-async-await.md",
     "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/02-promise.md",
-    "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/01-asynchronous-callback.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",
