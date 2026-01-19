@@ -204,9 +204,21 @@
               "icon": "lucide-file",
               "title": "Startup Idea"
             }
+          },
+          {
+            "id": "b4da8c2887c19fb2",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -389,7 +401,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Startup Idea.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -417,7 +428,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Startup Idea"
+              "title": "Graph view"
             }
           }
         ]
@@ -467,7 +478,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "36a74d4884214565",
+  "active": "b4da8c2887c19fb2",
   "lastOpenFiles": [
     "Startup Idea.md",
     "My Brain/1. ARCHIEVED/Vibe Money/Vibe code.md",
