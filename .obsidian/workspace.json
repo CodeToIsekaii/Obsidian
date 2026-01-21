@@ -209,12 +209,24 @@
             "id": "b4da8c2887c19fb2",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.4"
+                "file": "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Lỗi gặp phải khi dùng nodemailer.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
+              "icon": "lucide-file",
+              "title": "Lỗi gặp phải khi dùng nodemailer"
             }
           }
         ],
@@ -250,7 +262,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#map",
+                "query": "nodemail",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -281,7 +293,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -401,6 +414,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Lỗi gặp phải khi dùng nodemailer.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -428,7 +442,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Graph of Lỗi gặp phải khi dùng nodemailer"
             }
           }
         ]
