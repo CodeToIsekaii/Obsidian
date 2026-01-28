@@ -1,2 +1,2 @@
-admin gốc tạo adminsub và lecture,mọi thứ select updetet delet
-admin sub tạo lecture tạo semester, tạo lớp , và làm được tất cả của lecture
+admin gốc(cái này được tôi tạo sẵn trong db) tạo admin và lecture,mọi thứ select updetet delet
+admin  tạo lecture tạo semester, tạo lớp , và làm được tất cả của lecture
