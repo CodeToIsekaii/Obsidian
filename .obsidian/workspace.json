@@ -264,9 +264,33 @@
               "icon": "lucide-book-up",
               "title": "Release Notes 1.11.5"
             }
+          },
+          {
+            "id": "365c1e5f650128ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 4.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 4"
+            }
           }
         ],
-        "currentTab": 11
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -450,6 +474,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Untitled 4.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -477,7 +502,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Graph of Untitled 4"
             }
           }
         ]
@@ -527,8 +552,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a1bbd8fe3df21b01",
+  "active": "365c1e5f650128ce",
   "lastOpenFiles": [
+    "Untitled 4.md",
     "mongo.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Lỗi gặp phải khi dùng nodemailer.md",
     "Startup Idea.md",
@@ -557,7 +583,6 @@
     "Untitled.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Authentication node js react.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
-    "My Brain/1. ARCHIEVED/Full Stack/Java Script/Part05-asynchronous/03-async-await.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",
