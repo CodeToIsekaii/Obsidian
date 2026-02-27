@@ -235,7 +235,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mongo.md",
+                "file": "List máy ảnh cũ.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -250,47 +250,23 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "mongo"
+              "title": "List máy ảnh cũ"
             }
           },
           {
-            "id": "a1bbd8fe3df21b01",
+            "id": "73239da3dd7deef6",
             "type": "leaf",
             "state": {
               "type": "release-notes",
               "state": {
-                "currentVersion": "1.11.5"
+                "currentVersion": "1.11.7"
               },
               "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.5"
-            }
-          },
-          {
-            "id": "365c1e5f650128ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 4.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 4"
+              "title": "Release Notes 1.11.7"
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -353,8 +329,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -474,7 +449,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Untitled 4.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -502,7 +476,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Untitled 4"
+              "title": "Graph view"
             }
           }
         ]
@@ -552,9 +526,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "365c1e5f650128ce",
+  "active": "73239da3dd7deef6",
   "lastOpenFiles": [
+    "Untitled 5.md",
+    "Untitled 6.md",
     "Untitled 4.md",
+    "Untitled 3.md",
+    "Untitled 2.md",
+    "List máy ảnh cũ.md",
+    "Untitled.md",
     "mongo.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Lỗi gặp phải khi dùng nodemailer.md",
     "Startup Idea.md",
@@ -576,13 +556,7 @@
     "My Brain/1. ARCHIEVED/AICreative",
     "Requirement SWP.md",
     "My Brain/1. ARCHIEVED/Full Stack/React/map, filter, reduce.md",
-    "khởi tạo môi trường react.md",
     "attachments/Pasted image 20250517231222.png",
-    "My Brain/1. ARCHIEVED/AICreative/COMBO GOLDEN PROMPT HUMAN TYPOGRAPHY.md",
-    "Untitled 3.md",
-    "Untitled.md",
-    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Authentication node js react.md",
-    "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích/Tóm tắt 20 khái niệm Networking cơ bản qua ví dụ trường học.md",
     "My Brain/1. ARCHIEVED/Full Stack/Lưu những thứ có ích",
     "attachments/Pasted image 20250518220841.png",
     "attachments/Pasted image 20250518220542.png",
