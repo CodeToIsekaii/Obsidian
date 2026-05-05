@@ -252,9 +252,21 @@
               "icon": "lucide-file",
               "title": "List máy ảnh cũ"
             }
+          },
+          {
+            "id": "e680ceebc9460d38",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.4"
+            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -437,7 +449,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "List máy ảnh cũ.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -465,7 +476,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of List máy ảnh cũ"
+              "title": "Graph view"
             }
           }
         ]
@@ -515,7 +526,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "b5468365f3dd3444",
+  "active": "e680ceebc9460d38",
   "lastOpenFiles": [
     "Untitled 5.md",
     "Untitled 6.md",
