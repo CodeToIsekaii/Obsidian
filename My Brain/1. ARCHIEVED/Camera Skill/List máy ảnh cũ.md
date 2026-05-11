@@ -2,10 +2,10 @@
 [a4400](https://www.facebook.com/share/p/14UbtFxYMrT/)
 [lens ttartisan](https://www.facebook.com/share/p/1HvmgsYVjs/)
 [len](https://www.facebook.com/share/p/19f9oEtuSp/)
-[len 18 105](https://www.facebook.com/share/p/1AhEeVemhb/)
+
 [len 4,5tr](https://www.facebook.com/groups/sonyalpha6/permalink/25794062753581142/?mibextid=FcsR0n)
 [len](https://www.facebook.com/share/p/1FtYWqsvuC/)
-[a6400+18-105](https://www.facebook.com/share/p/1K9F7y2cck/)
+
 [a6400](https://www.facebook.com/share/p/17ax3q1AJG/)
 [cả bộ](https://www.facebook.com/groups/297220206177043/permalink/769916335574092/?mibextid=FcsR0n)
 [kit 18 55](https://www.facebook.com/share/p/1Bwodds3nn/)

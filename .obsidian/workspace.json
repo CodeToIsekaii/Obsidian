@@ -290,7 +290,7 @@
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -473,6 +473,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "My Brain/1. ARCHIEVED/Camera Skill/List máy ảnh cũ.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -500,7 +501,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Graph of List máy ảnh cũ"
             }
           }
         ]
@@ -550,12 +551,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "bc24665023bc3c7f",
+  "active": "b5468365f3dd3444",
   "lastOpenFiles": [
+    "My Brain/1. ARCHIEVED/Camera Skill/Chế độ chụp.md",
     "My Brain/1. ARCHIEVED/Camera Skill/Bố cục.md",
     "My Brain/1. ARCHIEVED/Camera Skill/Trick and Tip.md",
     "My Brain/1. ARCHIEVED/Camera Skill/List máy ảnh cũ.md",
-    "My Brain/1. ARCHIEVED/Camera Skill/Chế độ chụp.md",
     "My Brain/1. ARCHIEVED/Camera Skill/attachments/Pasted image 20260505220318.jpg",
     "My Brain/1. ARCHIEVED/Camera Skill/attachments",
     "Untitled 2.md",
