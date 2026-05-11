@@ -22,7 +22,7 @@
 [tartisan #### 50f1.8 new full box 1tr8 xoá phông mù mịt](https://www.facebook.com/share/p/1AzxygCVA5/)
 [phụ kiện](https://www.facebook.com/groups/sonyalpha6/permalink/25998820153105400/?rdid=UJ82nmI1Ejfi9aPa#)
 [len tartisan 1.8](https://www.facebook.com/groups/297220206177043/permalink/801280162437709/?rdid=3X8hU6GPO9LHiXAk#)
-[Full combo sonya6400(full box,9k5shot,còn full dây,bảo hành 7/2026)+lens sony 24-70/f3.5,lens sony 50/f1.8+gimbal DJI RSC2(ko box) và vài phụ kiện đi kèm(có vài món chỉ mới test 1 lần và còn full box),giá ra đi cả:24.5đ](https://www.facebook.com/groups/297220206177043/permalink/801036405795418/?rdid=42Vg5JX9FnoMI5p3#)
+
 [Cần pass em sel sony 50f1.8 ngoại hình đẹp. Giá mong muốn 3 triệu 3](https://www.facebook.com/groups/sonyalpha.sonynex/permalink/925153647125272/?rdid=tSeUUzAwUVUqFroO#)
 [#### **Cần tl lens viktrox 56f1.7 mới keng không vết xước giá 2tr6.**](https://www.facebook.com/groups/sonyalpha6/permalink/26110877585232989/?rdid=G5MbBuJ6Dd66sEmS#)
 [sony a6400 12tr](https://www.facebook.com/groups/sonyalpha6/permalink/26280286708292075/?rdid=lYrCEWk4x7tuXk73#)
