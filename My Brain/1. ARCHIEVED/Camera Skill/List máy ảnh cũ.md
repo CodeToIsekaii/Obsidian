@@ -11,10 +11,10 @@
 [kit 18 55](https://www.facebook.com/share/p/1Bwodds3nn/)
 [56 f1.8](https://www.facebook.com/groups/572948096950119/permalink/1939048080340107/?mibextid=FcsR0n)
 [ngon](https://www.facebook.com/share/p/17XS95MuMq/)
-[sel 35mm](https://www.facebook.com/share/p/1ZATBwT7gY/)
+
 [sigma 16mm](https://www.facebook.com/share/p/1AU9NpiNZL/)
 [Lens 18-135mm](https://www.facebook.com/share/p/1KqbjTRjDy/)
-[lens sigma 30mm f1.4 4tr2](https://www.facebook.com/share/p/1876pLxZRY/)
+
 [sel50](https://www.facebook.com/share/p/1GdiVtGjwp/)
 [sel50](https://www.facebook.com/share/p/17y6AVWSWp/)
 [khung](https://www.facebook.com/share/p/1N7gEEtrxP/)
